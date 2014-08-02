@@ -1,13 +1,8 @@
 <?php 
-  $org=Organization::model()->findAll();
-
-
-
+  $org=Organization::model()->find();
 ?>
-
-
 <div class="panel panel-primary" style="margin: 100px">
-  <div class="panel-heading">Login </div>
+  <div class="panel-heading">Login <?php echo $org->org_name; ?> </div>
   <div class="panel-body">
     
     <?php if (Yii::app()->user->hasFlash('message')): ?>

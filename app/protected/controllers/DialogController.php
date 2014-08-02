@@ -15,6 +15,119 @@ class DialogController extends CController {
     ));
   }
 
+ function actionDialogReprintBillVatPDF() {
+    
+    $str=Yii::app()->urlManager->parseUrl(Yii::app()->request);
+    $str =explode("/",$str);
+    
+     if(count($str)>0)
+      $sale_bill_id= $str[count($str)-1];
+    else
+      $sale_bill_id=0;
+
+    if(isset($sale_bill_id))
+    {
+
+        $org = Organization::model()->find();
+
+        $criteria = new CDbCriteria();
+        $criteria->condition="bill_sale_status='pay' and bill_sale_id=:bill_sale_id";
+        $criteria->params=array(':bill_sale_id'=>$sale_bill_id);
+        $billSale = BillSale::model()->find($criteria);
+
+        $this->render('//Dialog/DialogBillAddVat', array(
+            'org' => $org,
+            'billSale' => $billSale
+        ));
+    }
+  }
+
+
+  public function actionDialogReprintPDF()
+  {
+    $str=Yii::app()->urlManager->parseUrl(Yii::app()->request);
+    $str =explode("/",$str);
+    if(count($str)>0)
+      $sale_bill_id= $str[count($str)-1];
+    else
+      $sale_bill_id=0;
+
+    if(isset($sale_bill_id))
+    {
+      
+    
+    $criteria = new CDbCriteria();
+    $criteria->condition='bill_sale_id=:bill_sale_id';
+    $criteria->params=array(':bill_sale_id'=>$sale_bill_id);
+
+
+    $billSale = BillSale::model()->find($criteria);
+
+    // organization data
+    $org = Organization::model()->find();
+
+  
+    $criteria = new CDbCriteria();
+    $criteria->compare('bill_id', $sale_bill_id);
+
+    $billSaleDetail = BillSaleDetail::model()->findAll($criteria);
+
+    // member
+    $criteria = new CDbCriteria();
+    $criteria->compare('member_code', $billSale->member->member_code);
+
+    $member = Member::model()->find($criteria);
+
+    $this->renderPartial('//Report/BillSendProduct', array(
+        'org' => $org,
+        'billSale' => $billSale,
+        'billSaleDetail' => $billSaleDetail,
+        'member' => $member
+    ));
+    }
+  }
+
+  function actionDialogReprintBillVat()
+  {
+    $saleBill=new BillSale();
+      $model = new CActiveDataProvider($saleBill, array(
+        'sort' => array(
+            'defaultOrder' => 'bill_sale_id DESC'
+        )
+      ));
+
+    $pagination = new CPagination();
+    $pagination->setPageSize(40);
+    $model->setPagination($pagination);
+
+     $printType=2;
+    $this->render('//Dialog/DialogReprintBill', array(
+        'model' => $model,'printType'=>$printType,
+    ));
+  }
+
+
+  public function actionDialogReprintBill()
+  {
+      $saleBill=new BillSale();
+      $model = new CActiveDataProvider($saleBill, array(
+        'sort' => array(
+            'defaultOrder' => 'bill_sale_id DESC'
+        )
+      ));
+
+    $pagination = new CPagination();
+    $pagination->setPageSize(40);
+    $model->setPagination($pagination);
+
+    $printType=1;
+   
+    $this->render('//Dialog/DialogReprintBill', array(
+        'model' => $model,'printType'=>$printType,
+    ));
+
+  }
+
   public function actionDialogProduct() {
     $product = new Product();
     $model = new CActiveDataProvider($product, array(
@@ -195,6 +308,9 @@ class DialogController extends CController {
         'model' => $model
     ));
   }
+
+
+
 
   function actionDialogBillAddVat() {
     $org = Organization::model()->find();

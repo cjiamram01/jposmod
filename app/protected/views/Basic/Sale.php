@@ -104,15 +104,21 @@
   }
 
   function printBillSendProduct() {
-    var uri = "index.php?r=Dialog/DialogBillSendProduct";
+    //var uri = "index.php?r=Dialog/DialogBillSendProduct";
+
+    var uri="index.php?r=Dialog/DialogReprintBill";
     var options = "dialogWidth=800px; dialogHeight=650px";
     var w = window.showModalDialog(uri, null, options);
   }
 
   function printBillTax() {
-    var uri = "index.php?r=Dialog/DialogBillAddVat";
+    //var uri = "index.php?r=Dialog/DialogBillAddVat";
+    //var options = "dialogWidth=800px; dialogHeight=650px";
+    //var w = window.showModalDialog(uri, null, options);
+    var uri="index.php?r=Dialog/DialogReprintBillVat";
     var options = "dialogWidth=800px; dialogHeight=650px";
     var w = window.showModalDialog(uri, null, options);
+    
   }
 
   $(function() {
@@ -269,6 +275,8 @@
           พิมพ์ใบเสร็จ
         </a>
       </li>
+
+
     </ul>
   </div>
 
