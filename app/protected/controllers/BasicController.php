@@ -19,6 +19,91 @@ class BasicController extends Controller {
     ));
   }
 
+
+  public function actionWriteJsonItemGroup()
+  {
+    $strJson="{\n";
+    $strJson.=" \"root\": [\n";
+    $crt1=new CDbCriteria();
+    $crt1->select="id,group_code,DESCRIPTION";
+    $crt1->condition="LEVEL=0";
+    $Ms1=Itemgroup::model()->findAll($crt1);
+    //***********Start Parent Heirachy************* 
+    $i1=0;
+    foreach($Ms1 as $m1)
+    {
+      $i1++;
+      $strJson.="\t\t{\n";
+      $strJson.= "\t\t\t\"id\": ".$m1->id.",\n";
+      $strDesc=str_replace('"', '', $m1->DESCRIPTION);
+      $strJson.= "\t\t\t\"name\": \"".$strDesc."\"";
+
+      //***********Start first child*******
+      $crt2=new CDbCriteria();
+      $crt2->select="id,group_code,DESCRIPTION";
+      $crt2->condition="LEVEL=1 AND parent_code=:parent_code";
+      $crt2->params=array(':parent_code'=>$m1->group_code);
+      $Ms2=Itemgroup::model()->findAll($crt2);
+      if(count($Ms2)>0)
+      {
+        $strJson.=",\n";
+        $strJson.="\t\t\t\t\"childnodes\": [\n";
+        $i2=0;
+        foreach($Ms2 as $m2)
+        {
+          $i2++;
+          $strJson.="\t\t\t\t\t{\n";
+          $strJson.= "\t\t\t\t\t\t\"id\": ".$m2->id.",\n";
+          $strDesc=str_replace('"', '', $m2->DESCRIPTION);
+          $strJson.= "\t\t\t\t\t\t\"name\": \"".$strDesc."\"";
+          //****************Start second child******
+            $crt3=new CDbCriteria();
+            $crt3->select="id,group_code,DESCRIPTION";
+            $crt3->condition="LEVEL=2 AND parent_code=:parent_code";
+            $crt3->params=array(':parent_code'=>$m2->group_code);
+            $Ms3=Itemgroup::model()->findAll($crt3);
+            if(count($Ms3)>0)
+            { 
+              $strJson.=",\n";
+              $i3=0;
+              $strJson.="\t\t\t\t\t\t\t\"childnodes\": [\n";
+              foreach($Ms3 as $m3)
+              {
+                $i3++;
+                $strJson.="\t\t\t\t\t\t\t\t{\n";
+                $strJson.= "\t\t\t\t\t\t\t\t\t\"id\": ".$m3->id.",\n";
+                $strDesc=str_replace('"', '', $m3->DESCRIPTION);
+                $strJson.= "\t\t\t\t\t\t\t\t\t\"name\": \"".$strDesc."\"\n";
+                $strJson.=$i3<count($Ms3)?"\t\t\t\t\t\t\t\t},\n":"\t\t\t\t\t\t\t\t}\n";
+              }
+              $strJson.="\t\t\t\t\t\t\t]\n";
+            }
+
+          //****************************************
+          $strJson.=$i2<count($Ms2)?"\t\t\t\t\t},\n":"\t\t\t\t\t}\n";
+
+        }
+        $strJson.="\t\t\t\t]\n";
+      }
+
+      //***********************************
+      
+      $strJson.=$i1<count($Ms1)?"\t\t},\n":"\t\t}\n";
+    }
+    //***********End Parent Heirachy*************
+
+    $strJson.="\t]\n";  
+    $strJson.="}\n";
+
+    $fp = fopen('protected\config\ItemGroup.json', 'w');
+    fwrite($fp, $strJson);
+
+    fclose($fp);
+
+  }
+
+  
+
   function actionBillImport($id = null) {
     $model = new BillImport();
 

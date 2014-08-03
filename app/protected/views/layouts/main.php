@@ -13,12 +13,18 @@
     echo CHtml::cssFile('css/bootstrap.css');
     echo CHtml::cssFile('css/bootstrap-theme.css');
     echo CHtml::cssFile('css/ui-lightness/jquery-ui-1.10.3.custom.css');
+    //echo CHtml::cssFile('css/jquery.treeview.css');
+    //echo CHtml::cssFile('css/screen.css');
 
     // js
     Yii::app()->clientScript->registerScriptFile('js/jquery-2.0.3.js');
     Yii::app()->clientScript->registerScriptFile('js/jquery-ui-1.10.3.custom.js');
     Yii::app()->clientScript->registerScriptFile('js/bootstrap.js');
 		Yii::app()->clientScript->registerScriptFile('js/numeral/numeral.js');
+    Yii::app()->clientScript->registerScriptFile('js/jquery.treeview.js');
+    Yii::app()->clientScript->registerScriptFile('js/jQueryRotateCompressed.2.1.js');
+    Yii::app()->clientScript->registerScriptFile('js/jquery.jsontreeviewer.js');
+  
     ?>
 
     <style>

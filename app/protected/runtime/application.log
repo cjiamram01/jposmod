@@ -4189,3 +4189,17 @@ Stack trace:
 REQUEST_URI=/jpos/app/index.php?r=Dialog/DialogReprintBill
 HTTP_REFERER=http://localhost/jpos/app/index.php?r=Basic/Sale
 ---
+2014/08/02 16:57:53 [error] [php] include(Itemgroup.php): failed to open stream: No such file or directory (C:\xampp\htdocs\jpos\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(30): spl_autoload_call()
+#1 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionWriteJsonItemGroup()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#5 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#6 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/index.php?r=basic/WriteJsonItemGroup
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (30)
+in C:\xampp\htdocs\jpos\app\index.php (16)

@@ -118,7 +118,7 @@
     var uri="index.php?r=Dialog/DialogReprintBillVat";
     var options = "dialogWidth=800px; dialogHeight=650px";
     var w = window.showModalDialog(uri, null, options);
-    
+
   }
 
   $(function() {
@@ -306,10 +306,7 @@
             <?php
              
                $sessionBillSale = Yii::app()->session['sessionBillSale'];
-                
-                //echo isset($sessionBillSale['bill_sale_vat'])."xxxxx";
 
-                //die;
                 if (!empty($sessionBillSale)) {
                      $billSaleVat=isset($sessionBillSale['bill_sale_vat'])?$sessionBillSale['bill_sale_vat']:"";
 
