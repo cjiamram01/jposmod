@@ -13,11 +13,12 @@
     echo $form->errorSummary($model);
     ?>
 
+    <?php $strPath= Yii::app()->baseUrl; ?>
     <?php if (!empty($model->org_logo)): ?>
       <div>
         <label></label>
         <?php
-        echo CHtml::image('upload/' . $model->org_logo, null, array(
+        echo CHtml::image($strPath.'/upload/' . $model->org_logo, null, array(
             'width' => '200px'
         ));
         ?>

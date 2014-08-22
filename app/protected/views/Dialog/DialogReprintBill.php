@@ -8,14 +8,16 @@
     window.returnValue = member;
     window.close();
   }*/
+
+  <?php  $strPath= Yii::app()->baseUrl; ?>
 function chooseBillNo(sale_bill_id){
-    var uri = "index.php?r=Dialog/DialogReprintPDF/"+sale_bill_id;
+    var uri = "<?php echo $strPath; ?>/Dialog/DialogReprintPDF?bill_id="+sale_bill_id;
     //var uri = "index.php?r=Dialog/DialogBillSendProduct";
     window.location=uri;
 }
 
 function chooseBillAddVat(sale_bill_id){
-    var uri = "index.php?r=Dialog/DialogReprintBillVatPDF/"+sale_bill_id;
+    var uri = "<?php echo $strPath; ?>/Dialog/DialogReprintBillVatPDF?bill_id="+sale_bill_id;
     //var uri = "index.php?r=Dialog/DialogBillSendProduct";
     window.location=uri;
 }

@@ -45,7 +45,8 @@ class Product extends CActiveRecord {
     return array(
         array('group_product_id, product_code, product_name, product_price', 'required'),
         array(
-            'product_detail, 
+             'group_product_id,
+              product_detail, 
               product_quantity, 
               product_pack_barcode,
               product_total_per_pack, 
@@ -56,7 +57,8 @@ class Product extends CActiveRecord {
               product_serial_no, 
               product_price_send, 
               product_price_per_pack, 
-              product_quantity_of_pack', 'safe'
+              product_quantity_of_pack,
+              product_name', 'safe'
         )
     );
   }

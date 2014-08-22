@@ -81,13 +81,13 @@
 			var return_str = '';
 			switch(jQuery.type(node))
 			{
-			case 'string':
+			/*case 'string':
 			  if ($('#hierarchy_chk').is(':checked')) {
 				  return_str += '<ul><li><span class="file">'+node+'</span></li></ul>';
 			  } else {
 				  return_str += '<ul><li><span class="file">'+node+'</span></li></ul>';
 			  }
-			  break;
+			  break;*/
 			case 'array':
 				$.each(node, function(item,value){
 					return_str += JSONTREEVIEWER.processNodes(this);
@@ -96,13 +96,13 @@
 			default:
 				/*object*/
 				$.each(node, function(item,value){
-					if ($('#hierarchy_chk').is(':checked')) {
+					//if ($('#hierarchy_chk').is(':checked')) {
 						return_str += '<ul><li><span class="folder">'+item+'</span>';
 						return_str += JSONTREEVIEWER.processNodes(this);
 						return_str += '</li></ul>';
-					} else {
-						return_str += JSONTREEVIEWER.processNodes(this);
-					}
+					//} else {
+					//	return_str += JSONTREEVIEWER.processNodes(this);
+					//}
 				});
 			}
 			/*Clean up any undefined elements*/
@@ -176,9 +176,10 @@
 	
 	/*store nodepath value to clipboard	(copy to top of page)*/
 	$('#browser li').live('click', function(){
-		var path = $('#pathtonode').html();
-		var pathdelim = $('#pathdelim_chk').val();
-		path = path.replace(/ &gt; /g,pathdelim);
+		//var path = $('#pathtonode').html();
+		//var pathdelim = $('#pathdelim_chk').val();
+		//path = path.replace(/ &gt; /g,pathdelim);
+		//alert('xxxxx');
 		JSONTREEVIEWER.addtoppath(path);
 	});
 		
@@ -209,8 +210,8 @@
 	
 	/*reset/clear the JSON tree and fields*/
 	$('#reset').live('click', function(){
-		$('input[name=hierarchy_chk]').attr('checked', true);
-		$('input[name=loadfile]').attr('value', "");
+		//$('input[name=hierarchy_chk]').attr('checked', true);
+		//$('input[name=loadfile]').attr('value', "");
 		$('#browser').empty();
 		$('#browser-text').show();
 		$('#selected_filename').empty();

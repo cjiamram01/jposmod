@@ -1,3 +1,4 @@
+   <?php $strPath= Yii::app()->baseUrl; ?>
 <script type="text/javascript">
     $(function() {
        $("#inputMoney").focus(); 
@@ -17,8 +18,9 @@
             return false;
         }
         
+
         $.ajax({
-            url: 'index.php?r=Basic/EndSaleTempData',
+            url: '<?php echo $strPath; ?>/Basic/EndSaleTempData',
             type: 'post',
             data: 
             {

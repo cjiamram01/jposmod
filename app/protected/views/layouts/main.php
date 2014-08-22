@@ -10,22 +10,52 @@
 
     <?php
     // css
-    echo CHtml::cssFile('css/bootstrap.css');
-    echo CHtml::cssFile('css/bootstrap-theme.css');
-    echo CHtml::cssFile('css/ui-lightness/jquery-ui-1.10.3.custom.css');
-    //echo CHtml::cssFile('css/jquery.treeview.css');
-    //echo CHtml::cssFile('css/screen.css');
 
-    // js
-    Yii::app()->clientScript->registerScriptFile('js/jquery-2.0.3.js');
-    Yii::app()->clientScript->registerScriptFile('js/jquery-ui-1.10.3.custom.js');
-    Yii::app()->clientScript->registerScriptFile('js/bootstrap.js');
-		Yii::app()->clientScript->registerScriptFile('js/numeral/numeral.js');
-    Yii::app()->clientScript->registerScriptFile('js/jquery.treeview.js');
-    Yii::app()->clientScript->registerScriptFile('js/jQueryRotateCompressed.2.1.js');
-    Yii::app()->clientScript->registerScriptFile('js/jquery.jsontreeviewer.js');
+    $strPath= Yii::app()->baseUrl;
+    echo CHtml::cssFile($strPath.'/css/bootstrap.css');
+    echo CHtml::cssFile($strPath.'/css/bootstrap-theme.css');
+    
+    if(Yii::app()->controller->action->id!="ChooseItem")
+        echo CHtml::cssFile($strPath.'/css/ui-lightness/jquery-ui-1.10.3.custom.css');
+    else
+    {
+        echo CHtml::cssFile($strPath.'/css/ui-lightness/jquery-ui-1.10.3.custom.css');
+        echo CHtml::cssFile($strPath.'/JQueryUI/global.css');
+        echo CHtml::cssFile($strPath.'/JQueryUI/shThemePhpBook.css');
+    }
+    
+
+    echo CHtml::cssFile($strPath.'/css/jquery.treeview.css');
+
+    if(Yii::app()->controller->action->id!="ChooseItem")
+    {
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/jquery-2.0.3.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/jquery-ui-1.10.3.custom.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/jquery.treeview.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/jQueryRotateCompressed.2.1.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/jquery.jsontreeviewer.js');
+    }
+    else
+
+    {
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/plusone.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/jquery-1.7.1.min.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/jquery.ui.core.min.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/jquery.ui.widget.min.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/jquery.ui.position.min.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/jquery.ui.autocomplete.min.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/shCore.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/shBrushPhp.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/shBrushXml.js');
+    }
+
+
+    Yii::app()->clientScript->registerScriptFile($strPath.'/js/bootstrap.js');
+    Yii::app()->clientScript->registerScriptFile($strPath.'/js/numeral/numeral.js');
   
     ?>
+
+
 
     <style>
       label {
@@ -108,7 +138,7 @@
     </style>
 
     <script>
-      var dateBefore=null;
+      /*var dateBefore=null;
       
       document.ready = function() {
         $(".calendar").datepicker({
@@ -131,7 +161,7 @@
             'ธันวาคม'
           ]  
         });
-      }
+      }*/
     </script>
 
     <title>SUT jPOS 2014 ระบบบริหารงานร้านค้าปลีก ส่ง ทุกรูปแบบ</title>
@@ -153,7 +183,7 @@
           $user = User::model()->findByPk($id);
           ?>
           <label><?php echo @$user->user_name; ?> (<?php echo @$user->user_level; ?>)</label>
-          <a href="index.php?r=Site/Logout" class="btn btn-danger" 
+          <a href="<?php echo  $strPath; ?>/Site/Logout" class="btn btn-danger" 
              onclick="return confirm('Logout Now')">
 						 <b class="glyphicon glyphicon-eject"></b>
             Logout

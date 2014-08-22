@@ -30,9 +30,10 @@
   }
 </style>
 
+    <?php $strPath= Yii::app()->baseUrl; ?>
 <script type="text/javascript">
   function browseProduct() {
-    var uri = "index.php?r=Dialog/DialogProduct";
+    var uri = "<?php echo $strPath; ?>/Dialog/DialogProduct";
     var options = "dialogWidth=800px; dialogHeight=600px";
     var w = window.showModalDialog(uri, null, options);
 
@@ -43,7 +44,7 @@
   }
 
   function browseMember() {
-    var uri = "index.php?r=Dialog/DialogMember";
+    var uri = "<?php echo $strPath; ?>/Dialog/DialogMember";
     var options = "dialogWidth=800px; dialogHeight=600px";
     var w = window.showModalDialog(uri, null, options);
 
@@ -54,7 +55,7 @@
   }
 
   function endSale() {
-    $("#formSale").attr('action', 'index.php?r=Basic/EndSale').submit();
+    $("#formSale").attr('action', '<?php echo $strPath; ?>/Basic/EndSale').submit();
   }
 
   //Allow for end sale
@@ -76,7 +77,7 @@
 
   function dialogEndSale() {
     if(checkAllowEndSale()==true){
-    var uri = "index.php?r=Dialog/DialogEndSale";
+    var uri = "<?php echo $strPath; ?>/Dialog/DialogEndSale";
     var options = "dialogWidth=800px; dialogHeight=420px";
     var w = window.showModalDialog(uri, null, options);
 
@@ -93,12 +94,12 @@
 
   function saleReset() {
     if (confirm('เริ่มการขายใหม่')) {
-      $("#formSale").attr('action', 'index.php?r=Basic/SaleReset').submit();
+      $("#formSale").attr('action', '<?php echo $strPath; ?>/Basic/SaleReset').submit();
     }
   }
 
   function printSlip() {
-    var uri = "index.php?r=Dialog/DialogPrintSlip";
+    var uri = "<?php echo $strPath; ?>/Dialog/DialogPrintSlip";
     var options = "dialogWidth=360px; dialogHeight=550px";
     var w = window.showModalDialog(uri, null, options);
   }
@@ -106,7 +107,7 @@
   function printBillSendProduct() {
     //var uri = "index.php?r=Dialog/DialogBillSendProduct";
 
-    var uri="index.php?r=Dialog/DialogReprintBill";
+    var uri="<?php echo $strPath; ?>/Dialog/DialogReprintBill";
     var options = "dialogWidth=800px; dialogHeight=650px";
     var w = window.showModalDialog(uri, null, options);
   }
@@ -115,7 +116,7 @@
     //var uri = "index.php?r=Dialog/DialogBillAddVat";
     //var options = "dialogWidth=800px; dialogHeight=650px";
     //var w = window.showModalDialog(uri, null, options);
-    var uri="index.php?r=Dialog/DialogReprintBillVat";
+    var uri="<?php echo $strPath; ?>/Dialog/DialogReprintBillVat";
     var options = "dialogWidth=800px; dialogHeight=650px";
     var w = window.showModalDialog(uri, null, options);
 
@@ -204,7 +205,7 @@
 
   function saveDataOnGrid() {
     $.ajax({
-      url: 'index.php?r=Ajax/SaleSaveOnGrid',
+      url: '<?php echo $strPath; ?>/Ajax/SaleSaveOnGrid',
       type: 'POST',
       data: $("#formGrid").serialize(),
       success: function(data) {

@@ -19,6 +19,105 @@ class BasicController extends Controller {
     ));
   }
 
+  public function actionWriteJsonLevel()
+  {
+     $strJson="{\n";
+     $strJson.="\"root\": [\n";
+
+        $crt0=new CDbCriteria();
+        $crt0->select="id,group_code,DESCRIPTION";
+        $crt0->condition="LEVEL=0";
+        $Ms0=Itemgroup::model()->findAll($crt0);
+        //***********Start Parent Heirachy************* 
+        $i0=0;
+        if(count($Ms0)>0)
+        {
+          foreach($Ms0 as $m0)
+          {
+              $i0++;
+            //********************Query level 1**************
+              $crt1=new CDbCriteria();
+              $crt1->select="id,group_code,DESCRIPTION";
+              $crt1->condition="LEVEL=1 AND group_code=:parent_code";
+              $crt1->params=array(':parent_code'=>$m0->group_code);
+              $Ms1=Itemgroup::model()->findAll($crt1);
+              if(count($Ms1)>0)
+              {
+               
+                $strJson.="\t\t\t{\n\t\t\t\t\"<a href='#'>".str_replace('"', '',$m0->DESCRIPTION)."</a>\":[\n";
+                $i1=0;
+                foreach($Ms1 as $m1)
+                 {
+                    $i1++;
+
+                    /*******Query Level 2************/
+                      $crt2=new CDbCriteria();
+                      $crt2->select="id,group_code,DESCRIPTION";
+                      $crt2->condition="LEVEL=2 AND group_code=:parent_code";
+                      $crt2->params=array(':parent_code'=>$m1->group_code);
+                      $Ms2=Itemgroup::model()->findAll($crt2);
+                    /*******************************/
+                      if(count($Ms2)>0)
+                      {
+                          $i2=0;
+                          foreach($Ms2 as $m2)
+                          {
+                             $i2++;
+                               /*******Query Level 2************/
+                                $crt3=new CDbCriteria();
+                                $crt3->select="id,group_code,DESCRIPTION";
+                                $crt3->condition="LEVEL=3 AND group_code=:parent_code";
+                                $crt3->params=array(':parent_code'=>$m2->group_code);
+                                $Ms3=Itemgroup::model()->findAll($crt2);
+                              /*******************************/
+                                 if(count($Ms3)>0)
+                                 {
+                                    $i3=0;
+                                    $strJson.="\t\t\t\t\t\"<a href='#'>".str_replace('"', '',$m2->DESCRIPTION)."</a>\":[";
+                                    $strJson.="\t\t\t\t\t\t{";
+                                      foreach($Ms3 as $m3)
+                                        {
+                                          $i3++;
+                                          $strJson.=$i3<count($Ms3)?"\t\t\t\t\t\t\t<a href='#'>".str_replace('"', '',$m3->DESCRIPTION)."</a>,\n":"\t\t\t\t\t\t\t<a href='#'>".str_replace('"', '',$m3->DESCRIPTION)."</a>\n";
+                                        }
+                                    $strJson.=$i2<count($Ms2)?"\t\t\t\t\t\t},\n":"\t\t\t\t\t\t}\n";
+                                    $strJson.="\t\t\t\t\t]\n";
+                                 }
+                                 else
+                                    $strJson.=$i2<count($Ms2)?"\t\t\t\t\t\"<a href='#'>".str_replace('"', '',$m2->DESCRIPTION)."</a>\",\n":"\t\t\t\t\t\"<a href='#'>".str_replace('"', '',$m2->DESCRIPTION)."</a>\"\n";
+
+                          }
+                      }
+                      else
+                      {
+                        $strJson.=$i1<count($Ms1)?"\t\t\t\t\"<a href='#'>".str_replace('"', '',$m1->DESCRIPTION)."</a>\",\n":"\t\t\t\t\"<a href='#'>".str_replace('"', '',$m1->DESCRIPTION)."</a>\"\n";
+
+                      }
+                 } 
+                $strJson.=$i0<count($Ms0)?"\t\t\t\t\t]\n\t\t\t},\n":"\t\t\t\t\t]\n\t\t\t}\n";
+              }
+              else
+              {
+                $strJson.=$i0<count($Ms0)?"\t\t\t\"<a href='#'>".str_replace('"', '',$m0->DESCRIPTION)."</a>\",\n":"\t\t\t\"<a href='#'>".str_replace('"', '',$m0->DESCRIPTION)."</a>\"\n";
+              }
+
+            //********************End Query Level 1**********
+          }
+           
+        }
+
+         //***********End Parent Heirachy************* 
+
+
+     $strJson.="]\n";
+     $strJson.="}";
+
+
+    $fp = fopen('ItemGroup7.json', 'w');
+    fwrite($fp, $strJson);
+
+    fclose($fp);
+  }
 
   public function actionWriteJsonItemGroup()
   {
@@ -34,9 +133,9 @@ class BasicController extends Controller {
     {
       $i1++;
       $strJson.="\t\t{\n";
-      $strJson.= "\t\t\t\"id\": ".$m1->id.",\n";
+      //$strJson.= "\t\t\t\"id\": ".$m1->id.",\n";
       $strDesc=str_replace('"', '', $m1->DESCRIPTION);
-      $strJson.= "\t\t\t\"name\": \"".$strDesc."\"";
+      $strJson.= "\t\t\t\"ชื่อกลุ่มที่ 0 :\"".$strDesc."\"";
 
       //***********Start first child*******
       $crt2=new CDbCriteria();
@@ -47,15 +146,17 @@ class BasicController extends Controller {
       if(count($Ms2)>0)
       {
         $strJson.=",\n";
-        $strJson.="\t\t\t\t\"childnodes\": [\n";
+        $strJson.="\t\t\t\t\"ลำดับที่ 1\": [\n";
         $i2=0;
         foreach($Ms2 as $m2)
         {
           $i2++;
           $strJson.="\t\t\t\t\t{\n";
-          $strJson.= "\t\t\t\t\t\t\"id\": ".$m2->id.",\n";
+         // $strJson.= "\t\t\t\t\t\t\"id\": ".$m2->id.",\n";
           $strDesc=str_replace('"', '', $m2->DESCRIPTION);
-          $strJson.= "\t\t\t\t\t\t\"name\": \"".$strDesc."\"";
+         // $strJson.= "\t\t\t\t\t\t\" ชื่อกลุ่มย่อยที่ 1\": \"".$strDesc."\"";
+          $strJson.= "\t\t\t\t\t\t\"".$strDesc."\"";
+          
           //****************Start second child******
             $crt3=new CDbCriteria();
             $crt3->select="id,group_code,DESCRIPTION";
@@ -66,14 +167,15 @@ class BasicController extends Controller {
             { 
               $strJson.=",\n";
               $i3=0;
-              $strJson.="\t\t\t\t\t\t\t\"childnodes\": [\n";
+              //$strJson.="\t\t\t\t\t\t\t\"ลำดับที่ 2\": [\n";
+              $strJson.="\t\t\t\t\t\t\t: [\n";
               foreach($Ms3 as $m3)
               {
                 $i3++;
                 $strJson.="\t\t\t\t\t\t\t\t{\n";
-                $strJson.= "\t\t\t\t\t\t\t\t\t\"id\": ".$m3->id.",\n";
+                //$strJson.= "\t\t\t\t\t\t\t\t\t\"id\": ".$m3->id.",\n";
                 $strDesc=str_replace('"', '', $m3->DESCRIPTION);
-                $strJson.= "\t\t\t\t\t\t\t\t\t\"name\": \"".$strDesc."\"\n";
+                $strJson.= "\t\t\t\t\t\t\t\t\t\"".$strDesc."\"\n";
                 $strJson.=$i3<count($Ms3)?"\t\t\t\t\t\t\t\t},\n":"\t\t\t\t\t\t\t\t}\n";
               }
               $strJson.="\t\t\t\t\t\t\t]\n";
@@ -95,7 +197,7 @@ class BasicController extends Controller {
     $strJson.="\t]\n";  
     $strJson.="}\n";
 
-    $fp = fopen('protected\config\ItemGroup.json', 'w');
+    $fp = fopen('ItemGroup4.json', 'w');
     fwrite($fp, $strJson);
 
     fclose($fp);
@@ -368,6 +470,73 @@ class BasicController extends Controller {
     // add new array to session
     Yii::app()->session['billSaleDetail'] = $newArray;
     $this->redirect(array('Sale'));
+  }
+
+
+ 
+
+  public function actionPO()
+  {
+   $model=new Purchaseorder();
+   if(isset($_POST['Purchaseorder']))
+    {
+       $pfrm=$_POST['Purchaseorder'];
+
+
+      $model->Status=0;
+      $date=date("Y-m-d H:i:s");
+      $sdate= explode("/", $_POST['order_date']);
+      $model->order_date=$sdate[2].'-'.$sdate[1].'-'.$sdate[0];
+      $model->Comment="ok";
+      $model->po_no=$pfrm['po_no'];
+      $model->supplier_id=$_POST['hdnSuppId'];
+      if($model->save())
+      {
+        $this->redirect(array('PO','id'=>$model->id));
+      }
+      
+     
+      
+     
+
+        //$this->redirect(array('view','id'=>$model->id));
+    }
+
+    
+
+    $id= Yii::app()->request->getParam('id');
+    if(!isset($id))
+    {
+      $modelDetail=new Purchasedetail();
+
+       $this->render('//purchaseorder/POForm',array('model'=>$model,'modelDetail'=>$modelDetail,));
+
+    }
+    else
+    {
+        $modelDetail=new Purchasedetail();
+        $criteria=new CDbCriteria();
+        $criteria->condition="PurchaseOrder_id=:PurchaseOrder_id";
+        $criteria->params=array(":PurchaseOrder_id"=>$id);
+        $modelDetail=$model->findAll($criteria);
+       /* $this->render('formPurchaseDetail',array(
+        'modelDetail'=>$modelDetail,'model'=>$model
+        ));*/
+       $this->render('//purchaseorder/POForm',array('model'=>$model,'modelDetail'=>$modelDetail,));
+
+    }
+
+    
+
+
+   /* 
+
+   $this->render('//purchaseorder/POForm',array(
+      'model'=>$model,
+    ));
+
+    */
+
   }
 
 	// END SALE

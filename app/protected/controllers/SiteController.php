@@ -38,6 +38,12 @@ class SiteController extends Controller {
     ));
   }
 
+  public function actionMultiply()
+  {
+     //$this->redirect(array("//site/multiply"));
+    $this->render("//site/multiply");
+  }
+
   public function actionHome() {
     $this->render("//site/home");
   }
