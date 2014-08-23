@@ -50,6 +50,20 @@
       $("#formPO").attr('action', '<?php echo $strPath; ?>/Basic/PO').submit();
     }
   }
+
+
+   function poModify() {
+        var uri = "<?php echo $strPath; ?>/Dialog/DialogSearchPO";
+        var options = "dialogWidth=750px; dialogHeight=400px";
+        var w = window.showModalDialog(uri, null, options);
+  }
+
+  function modifyPO(id)
+  {
+
+        var uri = "<?php echo $strPath; ?>/basic/PO/"+id;
+        window.location=uri;
+  }
   </script>
 
 <div class="panel panel-primary" style="margin: 10px">

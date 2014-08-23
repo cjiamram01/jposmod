@@ -51,7 +51,7 @@ class Purchaseorder extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'supplier' => array(self::BELONGS_TO, 'Supplier', 'supplier_id'),
+			'supplier' => array(self::BELONGS_TO, 'Farmer', 'supplier_id'),
 		);
 	}
 
