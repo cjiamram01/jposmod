@@ -133,7 +133,6 @@ class BasicController extends Controller {
     {
       $i1++;
       $strJson.="\t\t{\n";
-      //$strJson.= "\t\t\t\"id\": ".$m1->id.",\n";
       $strDesc=str_replace('"', '', $m1->DESCRIPTION);
       $strJson.= "\t\t\t\"ชื่อกลุ่มที่ 0 :\"".$strDesc."\"";
 
@@ -152,9 +151,7 @@ class BasicController extends Controller {
         {
           $i2++;
           $strJson.="\t\t\t\t\t{\n";
-         // $strJson.= "\t\t\t\t\t\t\"id\": ".$m2->id.",\n";
           $strDesc=str_replace('"', '', $m2->DESCRIPTION);
-         // $strJson.= "\t\t\t\t\t\t\" ชื่อกลุ่มย่อยที่ 1\": \"".$strDesc."\"";
           $strJson.= "\t\t\t\t\t\t\"".$strDesc."\"";
           
           //****************Start second child******
@@ -167,13 +164,11 @@ class BasicController extends Controller {
             { 
               $strJson.=",\n";
               $i3=0;
-              //$strJson.="\t\t\t\t\t\t\t\"ลำดับที่ 2\": [\n";
               $strJson.="\t\t\t\t\t\t\t: [\n";
               foreach($Ms3 as $m3)
               {
                 $i3++;
                 $strJson.="\t\t\t\t\t\t\t\t{\n";
-                //$strJson.= "\t\t\t\t\t\t\t\t\t\"id\": ".$m3->id.",\n";
                 $strDesc=str_replace('"', '', $m3->DESCRIPTION);
                 $strJson.= "\t\t\t\t\t\t\t\t\t\"".$strDesc."\"\n";
                 $strJson.=$i3<count($Ms3)?"\t\t\t\t\t\t\t\t},\n":"\t\t\t\t\t\t\t\t}\n";
@@ -473,44 +468,73 @@ class BasicController extends Controller {
   }
 
 
- 
+  
+
+  public function actionChooseItem()
+  {
+    $modelDetail=new Purchasedetail();
+    if(isset($_POST['Purchasedetail']))
+    {
+      $product_id=$_POST['product_id'];
+      $modelDetail->item_id=$product_id;
+      $id= Yii::app()->request->getParam('id');
+      $model->PurchaseOrder_id=$id;
+      if(isset($id))
+      {
+        if($model->save())
+          $this->redirect(array('//basic/PO','id'=>$id));       
+      }
+    }
+
+  }
 
   public function actionPO()
   {
    $model=new Purchaseorder();
-   if(isset($_POST['Purchaseorder']))
+   if(isset($_POST['Purchaseorder']))//Save when system to be post PO.
     {
-       $pfrm=$_POST['Purchaseorder'];
+       
 
-
+      $pfrm=$_POST['Purchaseorder'];
       $model->Status=0;
       $date=date("Y-m-d H:i:s");
       $sdate= explode("/", $_POST['order_date']);
       $model->order_date=$sdate[2].'-'.$sdate[1].'-'.$sdate[0];
       $model->Comment="ok";
       $model->po_no=$pfrm['po_no'];
+      $model->quotation_no=$pfrm['quotation_no'];
       $model->supplier_id=$_POST['hdnSuppId'];
       if($model->save())
       {
         $this->redirect(array('PO','id'=>$model->id));
       }
-      
-     
-      
-     
-
-        //$this->redirect(array('view','id'=>$model->id));
     }
+    else
+    if(isset($_POST["product_id"]))
+    {
+      $id= Yii::app()->request->getParam('id');
+      if(isset($id))
+      {
+        $modelDetail=new  Purchasedetail();
+        $modelDetail->Item_id=$_POST["product_id"];
+        $modelDetail->PurchaseOrder_id=$id;
+        $modelDetail->qty=$_POST["qty"];
+        $modelDetail->price=$_POST["price"];
 
-    
+        if($modelDetail->save())
+        {
+
+          $this->redirect(array('//basic/PO','id'=>$id)); 
+        }
+       // print_r($modelDetail->getErrors());
+      }
+    }
 
     $id= Yii::app()->request->getParam('id');
     if(!isset($id))
     {
-      $modelDetail=new Purchasedetail();
-
+       $modelDetail=new Purchasedetail();
        $this->render('//purchaseorder/POForm',array('model'=>$model,'modelDetail'=>$modelDetail,));
-
     }
     else
     {
@@ -518,25 +542,10 @@ class BasicController extends Controller {
         $criteria=new CDbCriteria();
         $criteria->condition="PurchaseOrder_id=:PurchaseOrder_id";
         $criteria->params=array(":PurchaseOrder_id"=>$id);
-        $modelDetail=$model->findAll($criteria);
-       /* $this->render('formPurchaseDetail',array(
-        'modelDetail'=>$modelDetail,'model'=>$model
-        ));*/
-       $this->render('//purchaseorder/POForm',array('model'=>$model,'modelDetail'=>$modelDetail,));
+        $modelDetail=$modelDetail->findAll($criteria);
+        $this->render('//purchaseorder/POForm',array('model'=>$model,'modelDetail'=>$modelDetail,));
 
     }
-
-    
-
-
-   /* 
-
-   $this->render('//purchaseorder/POForm',array(
-      'model'=>$model,
-    ));
-
-    */
-
   }
 
 	// END SALE

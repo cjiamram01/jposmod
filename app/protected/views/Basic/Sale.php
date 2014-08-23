@@ -606,7 +606,7 @@
                     </span>
                   </td>
                   <td>
-										<a href="index.php?r=Basic/SaleDelete&index=<?php echo $row - 1; ?>"
+										<a href="Basic/SaleDelete&index=<?php echo $row - 1; ?>"
 											class="btn btn-danger">
 											<b class="glyphicon glyphicon-remove"></b>
 										</a>

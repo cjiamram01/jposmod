@@ -19,55 +19,12 @@ class PurchasedetailController extends Controller
 		);
 	}
 
-	/**
-	 * Specifies the access control rules.
-	 * This method is used by the 'accessControl' filter.
-	 * @return array access control rules
-	 */
-	/*public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}*/
+	
 
 	
 
 
 
-	public function actionAjax()
-	{
-  
-
-    if(isset($_GET['term']))
-    {
-         //$request=trim($_GET['term']);
-         //echo $request."xxx";
-         $request="G";
-        $model=Product::model()->findAll(array("condition"=>"product_name like '$request%'"));
-        $data=array();
-        foreach($model as $get)
-        {
-            $data[]=$get->product_name;
-        }
-        $this->layout='empty';
-        echo json_encode($data);
-    }
-}
 
 
 	/**
@@ -82,65 +39,57 @@ class PurchasedetailController extends Controller
 		));
 	}
 
+	public function getPurchaseDetails($id)
+	    {
+	           $purchaseDetail=Yii::app()->db->createCommand()
+	          ->select("pd.id,tp.product_name,pd.qty,pd.price,tp.product_code")
+	          ->from('tbl_purchasedetail pd')
+	          ->join('tb_product tp','pd.Item_id=tp.product_id')
+	          ->where('pd.PurchaseOrder_id=:id',array(':id'=>$id))
+	          ->queryRow(); 
+	           return   $purchaseDetail;  
+	    }
+	
 
 	public function actionChooseItem()
 	{
-		$model=new Purchasedetail();
+		$modelDetail=new Purchasedetail();
 		if(isset($_POST['Purchasedetail']))
 		{
 			$product_id=$_POST['product_id'];
-			$model->item_id=$product_id;
+			$modelDetail->item_id=$product_id;
 			$id= Yii::app()->request->getParam('id');
 			$model->PurchaseOrder_id=$id;
-			if($model->save())
+			if(isset($id))
 			{
-				
-				//$modelQuery=new Purchasedetail();
-				//$criteria = new CDbCriteria();
-				//$criteria->condition="PurchaseOrder_id=:PurchaseOrder_id";
-				//$criteria->params=array(":PurchaseOrder_id"=>$id);
-				//$modelQuery=$model->findAll($criteria);
-				$this->redirect(array('//basic/PO','id'=>$id));
-
+				echo "complete";
+				if($model->save())
+					$this->redirect(array('//basic/PO','id'=>$id));				
 			}
 		}
 
-		$id= Yii::app()->request->getParam('id');
-		if(!isset($id))
-		{
-			$this->render('formPurchaseDetail',array(
-				'modelDetail'=>$model,'model'=>$model
-			));
-		}
-		else
-		{
-				$modelDetail=new Purchasedetail();
-				$criteria=new CDbCriteria();
-				$criteria->condition="PurchaseOrder_id=:PurchaseOrder_id";
-				$criteria->params=array(":PurchaseOrder_id"=>$id);
-				$modelDetail=$model->findAll($criteria);
-				$this->render('formPurchaseDetail',array(
-				'modelDetail'=>$modelDetail,'model'=>$model
-				));
-
-		}
 	}
 
 
 	public function actionGetProductJson()
 	{
 	
-	$term=$_REQUEST['term'];
+		$term=$_REQUEST['term'];
 	    if(isset($term))
 	    {
 	         $request=trim($term);
 
-	        $model=Product::model()->findAll(array("condition"=>"product_name like '%$request%'"));
+	        $criteria=new CDbCriteria();
+	        $criteria->select ="product_name,product_id";
+	        $criteria->condition="product_name like :request";
+	        $criteria->params=array(':request'=> '%'.$request.'%');
+	        $criteria->limit=30;
+	        $model=Product::model()->findAll($criteria);
+
 	        $data=array();
 	        foreach($model as $get)
 	        {
 	            $data[]=array('label' => $get->product_name,'id'=>$get->product_id);
-	           
 	        }
 
 	        $this->layout='empty';

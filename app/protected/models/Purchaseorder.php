@@ -34,12 +34,12 @@ class Purchaseorder extends CActiveRecord
 		return array(
 			array('supplier_id', 'required'),
 			array('supplier_id, Status', 'numerical', 'integerOnly'=>true),
-			array('po_no', 'length', 'max'=>20),
+			array('po_no,quotation_no', 'length', 'max'=>20),
 			array('Comment', 'length', 'max'=>500),
 			array('order_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, supplier_id, po_no, order_date, Status, Comment', 'safe', 'on'=>'search'),
+			array('id, supplier_id, po_no, order_date, Status, Comment, quotation_no', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +64,7 @@ class Purchaseorder extends CActiveRecord
 			'id' => 'ID',
 			'supplier_id' => yii::t('app','ผู้ให้บริการ'),
 			'po_no' => yii::t('app','หมายเลขสั่งซื้อ'),
+			'quotation_no' => yii::t('app','เลขที่ใบเสนอราคา'),
 			'order_date' => yii::t('app','วันที่สั่งซื้อ'),
 			'Status' => yii::t('app','Status'),
 			'Comment' => yii::t('app','หมายเหตุ'),
@@ -72,8 +73,6 @@ class Purchaseorder extends CActiveRecord
 
    public function getSupplier($supplier_id)
   {
-    
-
        $supplier = Yii::app()->db->createCommand()
       ->select('farmer_name,farmer_id')
       ->from('tbl_Purchaseorder po')

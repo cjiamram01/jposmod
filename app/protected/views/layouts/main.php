@@ -138,7 +138,7 @@
     </style>
 
     <script>
-      /*var dateBefore=null;
+      var dateBefore=null;
       
       document.ready = function() {
         $(".calendar").datepicker({
@@ -161,7 +161,7 @@
             'ธันวาคม'
           ]  
         });
-      }*/
+      }
     </script>
 
     <title>SUT jPOS 2014 ระบบบริหารงานร้านค้าปลีก ส่ง ทุกรูปแบบ</title>

@@ -32,11 +32,12 @@
 
  <script>
 
+    <?php $strPath= Yii::app()->baseUrl; ?>
 
 $(function() {
   $( "#search" ).autocomplete(
   {
-      source:'../GetProductJson.php',
+      source:'<?php echo $strPath; ?>/GetProductJson.php',
       minLength: 2,
       select: function( event, ui )
       {$("input[id=product_id]").val(ui.item.id);}
@@ -50,7 +51,7 @@ $(function() {
 
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-  'id'=>'purchasedetail-form',
+  'id'=>'formPD',
   'enableAjaxValidation'=>false,
 )); ?>
 
@@ -59,7 +60,7 @@ $(function() {
 <div class="col-md-1">
    <label style="width: 90px">รายการ:</label>
 </div>
-<div class="col-sm-3">
+<div class="col-sm-4">
  
 <input type='hidden' name='product_id' id='product_id'>  
 <input type="text" id="search" class="form-control" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
@@ -70,61 +71,106 @@ $(function() {
    <label style="width: 80px">จำนวน:</label>
 </div>
 <div class="col-sm-1">
-  <!--<input type="text" id="qty" value="1" class="form-control" style="width:60px" >-->
-    <?php echo $form->textField($modelDetail,'qty',array('size'=>20,'maxlength'=>20,'id'=>'qty','class'=>'form-control')); ?>
-
+ <input type="text" id="qty" name="qty" value="1" class="form-control" style="width:60px" >
 </div>
 <div class="col-sm-1">
    <label style="width: 50px">ราคา:</label>
 </div>
 <div class="col-sm-1">
-  <!--<input type="text" id="price" value="0" class="form-control" style="width:100px" >-->
-  <?php echo $form->textField($modelDetail,'price',array('size'=>20,'maxlength'=>20,'id'=>'price','class'=>'form-control')); ?>
+  <input type="text" id="price" name="price" value="0" class="form-control" style="width:100px" >
 </div>
 <div class="col-sm-1">
-       <a href="#" class="btn btn-primary" onclick="document.formPO.submit()">
+       <a href="#" class="btn btn-primary" onclick="document.getElementById('formPD').submit();">
                  <i class="glyphicon glyphicon-floppy-disk"></i>
                 เพิ่มรายการ
        </a>
 </div>
-<div class="col-sm-3">
-</div>
+
 <?php $this->endWidget(); ?>
 
+</div>
+</div>
+</div>
 
 
-    </div>
-  </div>
- 
-
-
-
-
-   </div>
-
-
-    <div class="form-group">
-
-
- <form id="formGrid">
+<div class="form-group">
+<form id="formGrid">
       <div class="" style="background-color: white;">
         <table class="table table-bordered table-striped items" width="100%">
           <thead style="background: #7FA2CA;color: #FFFFFF;">
 
             <tr>
-              <th width="30px" >ลำดับ</th>
-              <th width="100px">รหัสสินค้า</th>
+              <th width="30px" align="center">ลำดับ</th>
+              <th width="100px" align="center">รหัสสินค้า</th>
               
-              <th>ชื่อรายการ</th>
-              <th width="50px">ราคา</th>
-              <th width="50px">จำนวน</th>
+              <th align="center">ชื่อรายการ</th>
+              <th width="100px" align="center">จำนวน</th>
+              <th width="100px" align="center">ราคา</th>
+             
        
-              <th width="50px">รวม</th>
-              <th width="30px"></th>
+              <th width="100px" align="center">รวม</th>
+              <th width="30px" align="center"></th>
             </tr>
 
           </thead>
           <tbody>
+            <?php
+              $id= Yii::app()->request->getParam('id');
+              if(isset($id))
+              {
+               
+                 
+                 $details=Yii::app()->db->createCommand()
+                ->select("pd.id,tp.product_name,pd.qty,pd.price,tp.product_code")
+                ->from('tbl_purchasedetail pd')
+                ->join('tb_product tp','pd.Item_id=tp.product_id')
+                ->where('pd.PurchaseOrder_id=:id',array(':id'=>$id))
+                ->queryAll(); 
+                 $i=1;
+
+                foreach($details as $d)
+                {
+                  echo "<tr>\n";
+                  echo "<td align='center'>".$i."</td>";
+                  echo "<td align='center'>".$d["product_code"]."</td>";
+                  echo "<td>".$d["product_name"]."</td>";
+                  $qty=$d["qty"];
+                  $price=$d["price"];
+                  $total=$d["qty"]*$d["price"];
+                  echo "<td><input type='text' class='form-control qty' 
+                      style='text-align: center; width: 80px' 
+                      value='". $qty ."'
+                      id='txtQty_".$i."'
+                      name='qtys[]'
+                      /></td>\n";
+                  
+                  echo "<td><input type='text' class='form-control qty' 
+                      style='text-align: right; width: 100px' 
+                      value='".$price."'
+                      id='txtPrice_".$i."'
+                      name='prices[]'
+                      /></td>\n";
+                
+
+                  echo "<td align='right'>
+                    <span id='lblTotalPrice_". $i. "'
+                    class='pricePerRow'>
+                    ".number_format($total)."
+                    </span></td>\n";
+
+                  echo "<td>
+                    <a href='Basic/SaleDelete&index=<?php echo $i - 1; ?>'
+                      class='btn btn-danger'>
+                      <b class='glyphicon glyphicon-remove'></b>
+                    </a></td>";  
+
+                  echo "</tr>\n";
+
+
+                  $i++;
+                }
+              }
+            ?>
           </tbody>
         </table>
       </form>

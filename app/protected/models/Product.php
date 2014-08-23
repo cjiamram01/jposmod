@@ -46,6 +46,7 @@ class Product extends CActiveRecord {
         array('group_product_id, product_code, product_name, product_price', 'required'),
         array(
              'group_product_id,
+              product_code,
               product_detail, 
               product_quantity, 
               product_pack_barcode,

@@ -27,8 +27,8 @@ class Purchasedetail extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, PurchaseOrder_id, Item_id', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
+			array('PurchaseOrder_id, Item_id', 'required'),
+			//array('id', 'numerical', 'integerOnly'=>true),
 			array('PurchaseOrder_id, Item_id', 'length', 'max'=>20),
 			array('qty,price', 'length', 'max'=>18),
 			// The following rule is used by search().
@@ -46,6 +46,16 @@ class Purchasedetail extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 		);
+	}
+
+	public function getPurchaseDetials()
+	{
+		  $details=Yii::app()->db->createCommand()
+                ->select("pd.id,tp.product_name,pd.qty,pd.price,tp.product_code")
+                ->from('tbl_purchasedetail pd')
+                ->join('tb_product tp','pd.Item_id=tp.product_id')
+                ->where('pd.PurchaseOrder_id=:id',array(':id'=>$this->id))
+                ->queryAll(); 
 	}
 
 	/**
@@ -88,6 +98,9 @@ class Purchasedetail extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+
+	
 
 	/**
 	 * Returns the static model of the specified AR class.

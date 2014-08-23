@@ -44,10 +44,36 @@
 
     }
   }
+
+   function poReset() {
+    if (confirm('ทำการสั่งซื้อใหม่?')) {
+      $("#formPO").attr('action', '<?php echo $strPath; ?>/Basic/PO').submit();
+    }
+  }
   </script>
 
 <div class="panel panel-primary" style="margin: 10px">
   <div class="panel-heading">ระบบออกใบสั่งซื้อสินค้า</div>
+
+ <div class="navbar-primary mynav">
+    <ul class="nav navbar-nav">
+       <li>
+        <a href="#" onclick="poReset()">
+          <i class="glyphicon glyphicon-refresh"></i>
+          ทำการสั่งซื้อใหม่
+        </a>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav">
+       <li>
+        <a href="#" onclick="poModify()">
+          <i class="glyphicon glyphicon-cog"></i>
+          แก้ไขการสั่งซื้อ
+        </a>
+      </li>
+     </ul>
+  </div>
+
    <div class="panel-body">
    	 <?php
     $form = $this->beginWidget('CActiveForm', array(
@@ -69,18 +95,18 @@
 		<div class="col-sm-10">
      
        <?php
-                   
                     $id= Yii::app()->request->getParam('id');
                     $po_no="";
+                    $quotation_no="";
                     $order_date;
                     if(isset($id))
                     {
                       $model=Purchaseorder::model()->findByPk($id);
                       $po_no=$model->po_no;
+                      $quotation_no=$model->quotation_no;
                       $order_date=$model->order_date;
                       $supplier= $model->getSupplier($id);
                     }
-
             ?>
 
       <input type='hidden' id='hdnSuppId' value="<?php
@@ -95,17 +121,12 @@
                name="supplier_name" 
                value="<?php
                 if(isset($supplier))
-                {
                   echo $supplier['farmer_name'];
-                }
               ?>" 
                disabled="disabled" 
                class="form-control"
                style="width: 300px" />
-
-
-
-                <a href="#" onclick="browseSupplier()" class="btn btn-primary">
+          <a href="#" onclick="browseSupplier()" class="btn btn-primary">
           <i class="glyphicon glyphicon-search"></i>
           ...</a>
          </div>
@@ -113,6 +134,11 @@
           	<?php echo $form->labelEx($model,'po_no',array('class'=>'col-sm-2 control-label')); ?>
           	<div class="col-sm-2">
           				<?php echo $form->textField($model,'po_no',array('maxlength'=>20,'class'=>'form-control','style'=>'width: 300px' ,'value'=> $po_no)); ?>
+            </div>
+            <?php echo $form->labelEx($model,'quotation_no',array('class'=>'col-sm-2 control-label')); ?>
+
+              <div class="col-sm-2">
+                  <?php echo $form->textField($model,'quotation_no',array('maxlength'=>20,'class'=>'form-control','style'=>'width: 300px','value'=>$quotation_no)); ?>
             </div>
   	 		<?php echo $form->labelEx($model,'order_date',array('class'=>'col-sm-2 control-label')); ?>
   	 		<div class="col-sm-2">
