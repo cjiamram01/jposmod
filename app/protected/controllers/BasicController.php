@@ -443,6 +443,12 @@ class BasicController extends Controller {
     ));
   }
 
+  public function actionPurchaseDetailDelete($id)
+  {
+          PurchaseDetail->loadModel($id)->delete();
+
+  }
+
 	// SALE DELETE
   public function actionSaleDelete($index) {
     $billSaleDetail = Yii::app()->session['billSaleDetail'];
