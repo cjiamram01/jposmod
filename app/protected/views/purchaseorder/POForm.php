@@ -31,32 +31,98 @@
 </style>
 
 <script type="text/javascript">
-    <?php $strPath= Yii::app()->baseUrl; ?>
-  function browseSupplier() {
+<?php $strPath= Yii::app()->baseUrl; ?>
+  function computePrice(i) 
+  {
+    var pid=document.getElementById('pid_'+i).value;
+    var qty=document.getElementById('txtQty_'+i).value;
+    var price=document.getElementById('txtPrice_'+i).value;
+    var output =document.getElementById('txtTotalPrice_' + i);
+  
+    output.value=numeral(price * qty).format('0, 0');
+    saveList(pid,price,qty) ;
+    computeTotal();
+
+  }
+function computeTotal()
+{
+   sum=0;
+   i=0;
+   $("table.items tbody tr").each(function(data) 
+    {
+      var tr = $(this);
+      // ผลรวมของ จำนวน
+      tr.find("input.total").each(function(data) 
+      {    
+        i++;
+        sum += Number(document.getElementById("txtTotalPrice_"+i).value.replace(",",""));
+      });
+    });
+   document.getElementById("txtTotal").value=numeral(sum).format('0, 0');;
+}
+
+
+
+
+  function saveList(pid,price,qty)
+      {
+        var URL = '<?php echo $strPath; ?>/ModifyPurchaseDetail.php?pids='+pid+'&prices='+price+'&qtys='+qty;
+
+        if (window.XMLHttpRequest)
+        {req=new XMLHttpRequest();}
+        else if (window.ActiveXObject)
+        {req=new ActiveXObject("Microsoft.XMLHTTP");}
+        else
+        {return false;}
+        
+        req.onreadystatechange = statechange;
+        req.open("GET",URL,true);
+        req.send(null);
+      }
+      function statechange()
+      {
+        if (req.readyState==4) {
+        }
+        else{
+        }
+      } 
+
+
+
+  function saveModifyPurchaseDetail(pid,price,qty) 
+  {
+   var formData = $("#formGrid").serializeArray();
+   var URL = '<?php echo $strPath; ?>/ModifyPurchaseDetail.php?pid='+pid+'&price='+price+'&qty='+qty;
+  }
+
+
+  function browseSupplier() 
+  {
     var uri = "<?php echo $strPath; ?>/Dialog/DialogSupplier";
     var options = "dialogWidth=750px; dialogHeight=400px";
     var w = window.showModalDialog(uri, null, options);
-
-    if (w != null) {
-      //$("input[id=supplier_id]").val(w.supplier_id);
+    if (w != null) 
+    {
       $("input[id=supplier_name]").val(w.supplier_name);
       $("input[id=hdnSuppId]").val(w.supplier_id);
-
     }
   }
 
-   function poReset() {
-    if (confirm('ทำการสั่งซื้อใหม่?')) {
-      $("#formPO").attr('action', '<?php echo $strPath; ?>/Basic/PO').submit();
+   function poReset() 
+   {
+    if (confirm('ทำการสั่งซื้อใหม่?')) 
+    {
+      window.location='<?php echo $strPath; ?>/Basic/PO';
     }
-  }
+   }
 
 
-   function poModify() {
+   function poModify() 
+   {
         var uri = "<?php echo $strPath; ?>/Dialog/DialogSearchPO";
         var options = "dialogWidth=750px; dialogHeight=400px";
         var w = window.showModalDialog(uri, null, options);
-  }
+   }
 
   function modifyPO(id)
   {
@@ -64,6 +130,24 @@
         var uri = "<?php echo $strPath; ?>/basic/PO/"+id;
         window.location=uri;
   }
+
+   window.onload = function() {
+   // $("input[name=product_code]").focus();
+   computeTotal();
+  }
+
+
+
+$(function() {
+  $("#search").autocomplete(
+  {
+      source:'<?php echo $strPath; ?>/GetProductJson.php',
+      minLength: 2,
+      select: function( event, ui )
+      {$("input[id=product_id]").val(ui.item.id);}
+  })
+
+});
   </script>
 
 <div class="panel panel-primary" style="margin: 10px">

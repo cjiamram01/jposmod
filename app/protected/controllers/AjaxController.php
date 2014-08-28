@@ -42,6 +42,22 @@ class AjaxController extends Controller {
     $barcode->draw();
   }
 
+  public function actionModifyPurchaseDetail()
+  {
+   
+     $pids = Yii::app()->request->getParam('pids');
+     $prices = Yii::app()->request->getParam('prices');
+     $qtys = Yii::app()->request->getParam('qtys');
+     //if(isset($pids))
+     {
+        $model=Purchasedetail::model()->findByPk($pids);
+        $model->price=$prices;
+        $model->qty=$qtys;
+        $model->update();
+    }
+
+  }
+
   public function actionSaleSaveOnGrid() {
     $billSaleDetail = Yii::app()->session['billSaleDetail'];
 

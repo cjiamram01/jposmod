@@ -10319,3 +10319,322 @@ Stack trace:
 REQUEST_URI=/jpos/app/Dialog/DialogSearchPO
 HTTP_REFERER=http://localhost/jpos/app/Dialog/DialogSearchPO
 ---
+2014/08/23 18:57:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':$pid' at line 1. The SQL statement executed was: DELETE FROM `tbl_purchasedetail` WHERE id=:$pid.
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (457)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/08/23 18:57:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':$pid' at line 1. The SQL statement executed was: DELETE FROM `tbl_purchasedetail` WHERE id=:$pid' in C:\xampp\htdocs\jpos\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\db\ar\CActiveRecord.php(1818): CDbCommand->execute()
+#1 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(457): CActiveRecord->deleteAll('id=:$pid', Array)
+#2 [internal function]: BasicController->actionPurchaseDetailDelete('5')
+#3 C:\xampp\htdocs\jpos\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BasicController), Array)
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BasicController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PurchaseDetailD...')
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PurchaseD...')
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/jpos/app/basic/PurchaseDetailDelete?pid=5
+HTTP_REFERER=http://localhost/jpos/app/basic/PO/59
+---
+2014/08/23 19:02:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':$pid' at line 1. The SQL statement executed was: DELETE FROM `tbl_purchasedetail` WHERE id=:$pid.
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (450)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/08/23 19:02:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':$pid' at line 1. The SQL statement executed was: DELETE FROM `tbl_purchasedetail` WHERE id=:$pid' in C:\xampp\htdocs\jpos\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\db\ar\CActiveRecord.php(1818): CDbCommand->execute()
+#1 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(450): CActiveRecord->deleteAll('id=:$pid', Array)
+#2 [internal function]: BasicController->actionPurchaseDetailDelete('5')
+#3 C:\xampp\htdocs\jpos\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BasicController), Array)
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BasicController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PurchaseDetailD...')
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PurchaseD...')
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/jpos/app/basic/PurchaseDetailDelete?pid=5
+HTTP_REFERER=http://localhost/jpos/app/basic/PO/59
+---
+2014/08/23 19:09:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\jpos\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PurchaseDetailD...')
+#4 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PurchaseD...')
+#5 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#7 {main}
+REQUEST_URI=/jpos/app/basic/PurchaseDetailDelete
+---
+2014/08/23 19:10:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\jpos\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PurchaseDetailD...')
+#4 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PurchaseD...')
+#5 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#7 {main}
+REQUEST_URI=/jpos/app/basic/PurchaseDetailDelete
+---
+2014/08/23 19:10:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\jpos\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PurchaseDetailD...')
+#4 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PurchaseD...')
+#5 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#7 {main}
+REQUEST_URI=/jpos/app/basic/PurchaseDetailDelete
+---
+2014/08/23 19:13:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PurchaseDetailDelete&pid=5".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PurchaseDetailD...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PurchaseDetailD...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PurchaseD...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PurchaseDetailDelete&pid=5
+HTTP_REFERER=http://localhost/jpos/app/basic/PO/59
+---
+2014/08/23 19:14:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PurchaseDetailDelete&pid=5".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PurchaseDetailD...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PurchaseDetailD...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PurchaseD...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PurchaseDetailDelete&pid=5
+HTTP_REFERER=http://localhost/jpos/app/basic/PO/59
+---
+2014/08/23 19:15:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PurchaseDetailDelete&pid=5".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PurchaseDetailD...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PurchaseDetailD...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PurchaseD...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PurchaseDetailDelete&pid=5
+HTTP_REFERER=http://localhost/jpos/app/basic/PO/59
+---
+2014/08/25 04:46:48 [error] [php] Undefined variable: strPath (C:\xampp\htdocs\jpos\app\protected\views\purchasedetail\formPurchaseDetail.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#1 C:\xampp\htdocs\jpos\app\protected\views\purchaseorder\POForm.php(195): BasicController->renderPartial()
+#2 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#6 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(558): BasicController->render()
+#7 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionPO()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#10 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#11 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#12 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/index.php/basic/PO/63
+in C:\xampp\htdocs\jpos\app\protected\views\purchasedetail\formPurchaseDetail.php (52)
+in C:\xampp\htdocs\jpos\app\protected\views\purchaseorder\POForm.php (195)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (558)
+2014/08/26 09:04:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 09:04:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 09:05:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 09:05:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 09:05:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 09:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 09:09:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 09:09:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 09:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:10:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:10:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:10:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:10:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:13:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:13:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:26:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/26 11:26:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ModifyPurchaseDetail.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ModifyPurchaseD...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ModifyPurchaseDetail.php
+HTTP_REFERER=http://localhost/jpos/app/index.php/basic/PO/50
+---
+2014/08/27 09:57:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "basicฝหฟสำ".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic??????????...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/basic%E0%B8%9D%E0%B8%AB%E0%B8%9F%E0%B8%AA%E0%B8%B3
+---
+2014/08/27 09:57:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "basicฝหฟสำ".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic??????????...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/basic%E0%B8%9D%E0%B8%AB%E0%B8%9F%E0%B8%AA%E0%B8%B3
+---

@@ -229,7 +229,7 @@ class DialogController extends CController {
   {
      $model = new CActiveDataProvider('Farmer', array(
         'pagination' => array(
-            'pageSize' => 20
+            'pageSize' => 7
         )
     ));
 

@@ -205,6 +205,7 @@
 
   function saveDataOnGrid() {
     $.ajax({
+      
       url: '<?php echo $strPath; ?>/Ajax/SaleSaveOnGrid',
       type: 'POST',
       data: $("#formGrid").serialize(),

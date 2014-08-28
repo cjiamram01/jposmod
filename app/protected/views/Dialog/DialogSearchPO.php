@@ -1,20 +1,9 @@
 <script type="text/javascript">
   function chooseRecord(po_id) {
-   /* var supplier = {
-      supplier_id: supplier_id,
-      supplier_name: supplier_name
-    };*/
+   
 
-    var po={
-      po_id:po_id
-    };
-
-    //window.returnValue = po;
-    //window.opener.document.location.href("http://localhost/jpos/app");
-    // window.location"http://localhost/jpos/app");
     window.opener.modifyPO(po_id);
     window.close();
-   //window.opener.location="http://localhost/jpos/app/basic/PO";
   }
 </script>
 

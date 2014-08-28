@@ -1,51 +1,9 @@
-<style>
-  #textSum {
-    background-color: #808080; 
-    color: greenyellow; 
-    font-size: 25px; 
-    font-weight: bold; 
-    border: #000000 1px solid; 
-    text-align: right; 
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    display: inline-block;
-    width: 150px;
-  }
 
-  .mynav {
-    border-bottom: #cccccc 1px solid;
-    padding: 0px;
-    display: inline-block;
-    width: 100%;
-    background: #f2f5f6;
-  }
+<?php $strPath= Yii::app()->baseUrl; ?>
 
-  .mynav ul li a {
-    padding: 10px;
-  }
 
-  .mynav ul li {
-    padding: 0px;
-  }
-</style>
 
- <script>
-
-    <?php $strPath= Yii::app()->baseUrl; ?>
-
-$(function() {
-  $( "#search" ).autocomplete(
-  {
-      source:'<?php echo $strPath; ?>/GetProductJson.php',
-      minLength: 2,
-      select: function( event, ui )
-      {$("input[id=product_id]").val(ui.item.id);}
-  })
-
-});
-
-</script>
+ 
 <div class="panel panel-primary" style="margin: 10px">
    <div class="panel-body">
 
@@ -93,7 +51,7 @@ $(function() {
 </div>
 
 
-<div class="form-group">
+<div class="panel-body">
 <form id="formGrid">
       <div class="" style="background-color: white;">
         <table class="table table-bordered table-striped items" width="100%">
@@ -118,8 +76,6 @@ $(function() {
               $id= Yii::app()->request->getParam('id');
               if(isset($id))
               {
-               
-                 
                  $details=Yii::app()->db->createCommand()
                 ->select("pd.id,tp.product_name,pd.qty,pd.price,tp.product_code")
                 ->from('tbl_purchasedetail pd')
@@ -131,35 +87,40 @@ $(function() {
                 foreach($details as $d)
                 {
                   echo "<tr>\n";
-                  echo "<td align='center'>".$i."</td>";
+                  echo "<td align='center'>".$i."<input type='hidden' name='pids[]' value='".$d["id"]."' id='pid_".$i."'></td>";
                   echo "<td align='center'>".$d["product_code"]."</td>";
                   echo "<td>".$d["product_name"]."</td>";
                   $qty=$d["qty"];
                   $price=$d["price"];
                   $total=$d["qty"]*$d["price"];
-                  echo "<td><input type='text' class='form-control qty' 
+                  echo "<td><input type='text' onblur=\"computePrice(".$i.")\" class='form-control qty' 
                       style='text-align: center; width: 80px' 
                       value='". $qty ."'
                       id='txtQty_".$i."'
-                      name='qtys[]'
                       /></td>\n";
                   
-                  echo "<td><input type='text' class='form-control qty' 
+                  echo "<td><input type='text' onblur=\"computePrice(".$i.")\" class='form-control price' 
                       style='text-align: right; width: 100px' 
                       value='".$price."'
                       id='txtPrice_".$i."'
-                      name='prices[]'
                       /></td>\n";
                 
 
                   echo "<td align='right'>
-                    <span id='lblTotalPrice_". $i. "'
-                    class='pricePerRow'>
-                    ".number_format($total)."
-                    </span></td>\n";
+                    <input type='text' class='form-control total' 
+                      style='text-align: right; width: 100px' 
+                      value='". number_format($total) ."'
+                      id='txtTotalPrice_".$i."'
+                      name='totals[]'
+                      disabled=\"disabled\"
+                      />
+
+                    </td>\n";
+
+                  
 
                   echo "<td>
-                    <a href='Basic/SaleDelete&index=<?php echo $i - 1; ?>'
+                    <a href='".$strPath."/basic/PurchaseDetailDelete/".$id."?pid=".$d["id"]."'
                       class='btn btn-danger'>
                       <b class='glyphicon glyphicon-remove'></b>
                     </a></td>";  
@@ -172,8 +133,21 @@ $(function() {
               }
             ?>
           </tbody>
+
         </table>
       </form>
+<div style="padding-top: 0px">
+      <label style="display: inline-block; text-align: left; width: 50px">
+        Total: 
+      </label>
+       <input id="txtTotal" 
+             type="text" 
+             class="form-control disabled" 
+             disabled="disabled" 
+              
+             style="text-align: right; width: 150px" />
+</div>
+
     </div>
 
   </div> 

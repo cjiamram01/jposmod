@@ -443,9 +443,15 @@ class BasicController extends Controller {
     ));
   }
 
-  public function actionPurchaseDetailDelete($id)
+  public function actionPurchaseDetailDelete($pid)
   {
-          PurchaseDetail->loadModel($id)->delete();
+    $id= Yii::app()->request->getParam('id');
+     if(isset($id))
+    {
+        $purchaseDetail=Purchasedetail::model()->findByPk($pid);
+        $purchaseDetail->delete();  
+        $this->redirect(array('basic/PO','id'=>$id));
+    }
 
   }
 
