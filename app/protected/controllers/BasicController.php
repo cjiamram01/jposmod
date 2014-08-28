@@ -560,6 +560,15 @@ class BasicController extends Controller {
     }
   }
 
+  public function actionShiping()
+  {
+
+      $model =new Shiping();
+
+      $this->render('//shiping/ShipingForm',array('model'=>$model,));
+
+  }
+
 	// END SALE
   public function actionEndSale() {
     if (!empty(Yii::app()->session['billSaleDetail'])) {

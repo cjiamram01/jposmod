@@ -10638,3 +10638,20 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/jpos/app/basic%E0%B8%9D%E0%B8%AB%E0%B8%9F%E0%B8%AA%E0%B8%B3
 ---
+2014/08/28 09:32:17 [error] [php] Undefined variable: detail (C:\xampp\htdocs\jpos\app\protected\views\shiping\ShipingForm.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#2 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(568): BasicController->render()
+#3 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionShiping()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#7 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/Shiping
+in C:\xampp\htdocs\jpos\app\protected\views\shiping\ShipingForm.php (79)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (568)
+in C:\xampp\htdocs\jpos\app\index.php (16)
