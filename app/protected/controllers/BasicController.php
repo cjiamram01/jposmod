@@ -443,6 +443,18 @@ class BasicController extends Controller {
     ));
   }
 
+  public function actionShipingDetailDelete($pid)
+  {
+    $id= Yii::app()->request->getParam('id');
+     if(isset($id))
+    {
+        $shipingDetail=Shipingdetail::model()->findByPk($pid);
+        $shipingDetail->delete();  
+        $this->redirect(array('Shiping/create','id'=>$id));
+    }
+
+  }
+
   public function actionPurchaseDetailDelete($pid)
   {
     $id= Yii::app()->request->getParam('id');

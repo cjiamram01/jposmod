@@ -117,6 +117,39 @@ class DialogController extends CController {
 
   }
 
+  public function actionDialogSearchShiping()
+  {
+     $shiping=new Shiping();
+      $model = new CActiveDataProvider($shiping, array(
+        'sort' => array(
+            'defaultOrder' => 'id DESC'
+        )
+      ));
+
+    if (!empty($_POST)) 
+    {
+      $criteria = new CDbCriteria();
+      $criteria->compare('customer', $search, true, 'OR');
+      $criteria->compare('shiping_date', $search, true, 'OR');
+      $criteria->compare('detail', $search, true, 'OR');
+      $criteria->compare('status', $search, true, 'OR');
+      $criteria->compare('bill_no', $search, true,'OR');
+
+      $model->setCriteria($criteria);
+    }
+
+
+    $pagination = new CPagination();
+    $pagination->setPageSize(10);
+
+    $model->setPagination($pagination);
+
+    $this->render('//Dialog/DialogSearchShiping', array(
+        'model' => $model
+    ));
+    
+  }
+
 
   public function actionDialogSearchPO()
   {
@@ -198,6 +231,30 @@ class DialogController extends CController {
     $model->setPagination($pagination);
 
     $this->render('//Dialog/DialogProduct', array(
+        'model' => $model
+    ));
+  }
+
+  public function actionDialogCustomer()
+  {
+    $model = new CActiveDataProvider('Member', array(
+        'pagination' => array(
+            'pageSize' => 20
+        )
+    ));
+
+    if (!empty($_POST)) {
+      $search = $_POST['search'];
+      $criteria = new CDbCriteria();
+      $criteria->compare('member_code', $search, true, 'OR');
+      $criteria->compare('member_name', $search, true, 'OR');
+      $criteria->compare('member_tel', $search, true, 'OR');
+      $criteria->compare('member_address', $search, true, 'OR');
+
+      $model->setCriteria($criteria);
+    }
+
+    $this->render('//Dialog/DialogCustomer', array(
         'model' => $model
     ));
   }

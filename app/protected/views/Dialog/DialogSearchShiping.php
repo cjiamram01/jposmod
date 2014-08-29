@@ -1,14 +1,14 @@
 <script type="text/javascript">
-  function chooseRecord(po_id) {
+  function chooseRecord(shiping_id) {
    
 
-    window.opener.modifyPO(po_id);
+    window.opener.modifyShiping(shiping_id);
     window.close();
   }
 </script>
 
 <div class="panel panel-primary">
-  <div class="panel-heading">เลือกผู้จัดจำหน่าย</div>
+  <div class="panel-heading">เลือกรายการ</div>
   <div class="panel-body">
     <form name="formSearch" method="POST">
       <div class="input-group">
@@ -31,9 +31,9 @@
         'dataProvider' => $model,
         'columns' => array(
             array(
-                'name' => 'po_no',
+                'name' => 'bill_no',
                 'type' => 'raw',
-                'value' => 'CHtml::link($data->po_no, "#", array(
+                'value' => 'CHtml::link($data->bill_no, "#", array(
 							  "onclick" => "chooseRecord(\'$data->id\')"
 						))',
                 'htmlOptions' => array(
@@ -41,16 +41,12 @@
                     'width' => '100px'
                 )
             ),
-            'quotaion_no',
-            'Comment',
-             array(
-                    'name'=>'supplier_id',
-                    'value'=>'$data->supplier->farmer_name',
-             ),
-            //'order_date',
+            'customer',
+            'detail',
+          
               array(
-            'name'=>'order_date',
-            'value'=>"Yii::app()->dateFormatter->formatDateTime(\$data->order_date, 'medium', 'short')",
+            'name'=>'shiping_date',
+            'value'=>"Yii::app()->dateFormatter->formatDateTime(\$data->shiping_date, 'medium', 'short')",
             'filter'=>false, // Set the filter to false when date range searching
         ),
 

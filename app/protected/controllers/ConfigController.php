@@ -20,7 +20,6 @@ class ConfigController extends Controller {
 
       // logo
       $org_logo = CUploadedFile::getInstance($model, 'org_logo');
-      echo  $org_logo;
       $old_logo = $model->org_logo;
 
       if (!empty($org_logo)) {

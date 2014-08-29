@@ -42,8 +42,32 @@
     output.value=numeral(price * qty).format('0, 0');
     saveList(pid,price,qty) ;
     computeTotal();
-
   }
+
+function saveList(pid,price,qty)
+      {
+        var URL = '<?php echo $strPath; ?>/ModifyPurchaseDetail.php?pids='+pid+'&prices='+price+'&qtys='+qty;
+
+        if (window.XMLHttpRequest)
+        {req=new XMLHttpRequest();}
+        else if (window.ActiveXObject)
+        {req=new ActiveXObject("Microsoft.XMLHTTP");}
+        else
+        {return false;}
+        
+        req.onreadystatechange = statechange;
+        req.open("GET",URL,true);
+        req.send(null);
+      }
+      function statechange()
+      {
+        if (req.readyState==4) {
+        }
+        else{
+        }
+      } 
+
+
 function computeTotal()
 {
    sum=0;

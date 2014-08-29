@@ -1,26 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "tbl_shiping".
+ * This is the model class for table "tbl_shipingdetail".
  *
- * The followings are the available columns in table 'tbl_shiping':
+ * The followings are the available columns in table 'tbl_shipingdetail':
  * @property string $id
- * @property string $customer
- * @property string $shiping_date
- * @property string $detail
- * @property string $user_id
- * @property integer $status
- * @property string $car_code
+ * @property string $item_id
+ * @property string $qty
+ * @property string $price
+ * @property string $shiping_id
  * @property string $picture
  */
-class Shiping extends CActiveRecord
+class Shipingdetail extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_shiping';
+		return 'tbl_shipingdetail';
 	}
 
 	/**
@@ -31,14 +29,12 @@ class Shiping extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('status', 'numerical', 'integerOnly'=>true),
-			array('customer', 'length', 'max'=>400),
-			array('detail, picture', 'length', 'max'=>500),
-			array('user_id, car_code,bill_no', 'length', 'max'=>20),
-			array('shiping_date', 'safe'),
+			array('item_id, shiping_id', 'length', 'max'=>20),
+			array('qty, price', 'length', 'max'=>18),
+			array('picture', 'length', 'max'=>500),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, customer, shiping_date, detail, user_id, status, car_code, picture,bill_no', 'safe', 'on'=>'search'),
+			array('id, item_id, qty, price, shiping_id, picture', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,15 +56,11 @@ class Shiping extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'customer' => 'ลูกค้า',
-			'shiping_date' => 'วันส่งของ',
-			'detail' => 'รายละเอียด',
-			'user_id' => 'User',
-			'status' => 'สถานะ',
-			'car_code' => 'ทะเบียนรถ',
-			'picture' => 'รูปภาพ',
-			'bill_no' => 'เลขที่บิล',
-
+			'item_id' => 'Item',
+			'qty' => 'Qty',
+			'price' => 'Price',
+			'shiping_id' => 'Shiping',
+			'picture' => 'Picture',
 		);
 	}
 
@@ -91,12 +83,10 @@ class Shiping extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('customer',$this->customer,true);
-		$criteria->compare('shiping_date',$this->shiping_date,true);
-		$criteria->compare('detail',$this->detail,true);
-		$criteria->compare('user_id',$this->user_id,true);
-		$criteria->compare('status',$this->status);
-		$criteria->compare('car_code',$this->car_code,true);
+		$criteria->compare('item_id',$this->item_id,true);
+		$criteria->compare('qty',$this->qty,true);
+		$criteria->compare('price',$this->price,true);
+		$criteria->compare('shiping_id',$this->shiping_id,true);
 		$criteria->compare('picture',$this->picture,true);
 
 		return new CActiveDataProvider($this, array(
@@ -108,7 +98,7 @@ class Shiping extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Shiping the static model class
+	 * @return Shipingdetail the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

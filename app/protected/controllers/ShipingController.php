@@ -69,14 +69,96 @@ class ShipingController extends Controller
 
 		if(isset($_POST['Shiping']))
 		{
+		 $dataPost=$_POST['Shiping'];
+		 $sdate= explode("/", $dataPost["shiping_date"]);
+		 $shipingDate=$sdate[2].'-'.$sdate[1].'-'.$sdate[0];
+		 $new_picture = CUploadedFile::getInstance($model, 'picture');
+     	 $old_picture = $model->picture;
+
+
+          $user_id = Yii::app()->request->cookies['user_id']->value;
+          $model->user_id=$user_id;
+
+         
+	      
+	      if (!empty($new_picture)) 
+	      {
+	        $model->picture = $new_picture;
+	        $model->picture->saveAs('upload/shiping/' . $new_picture);
+
+	        // remove old picture
+	        if (file_exists('upload/shiping/' . $new_picture)) 
+	        {
+	          @unlink('upload/shiping/' . $old_picture);
+	        }
+	      }
+
+
 			$model->attributes=$_POST['Shiping'];
+			$model->shiping_date=$shipingDate;
+			$model->status=0;
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			{
+ 				$id=$model->id;
+ 				$this->redirect(array('create','id'=>$id)); 
+			}
 		}
 
-		$this->render('ShipingForm',array(
-			'model'=>$model,
-		));
+		//With out post shiping
+
+		$id= Yii::app()->request->getParam('id');
+		if(isset($id))
+		{
+			
+			if(isset($_POST["product_id"]))
+			{
+				/*Save model shiping detail*/
+				$modelDetail=new Shipingdetail();
+				$modelDetail->shiping_id=$id;
+				$modelDetail->item_id=$_POST["product_id"];
+				$modelDetail->qty=$_POST["qty"];
+				$modelDetail->price=$_POST["price"];
+
+				$model=$model->findByPk($id);
+				if($modelDetail->save())
+		        {
+
+		         	 $this->render('ShipingForm',array(
+					 'model'=>$model,'id'=>$id
+				));		
+		        }
+		        
+	    	}
+	    	else
+	    	{
+	    		$modelDetail=new Shipingdetail();
+	    		$criteria=new CDbCriteria();
+        		$criteria->condition="shiping_id=:shiping_id";
+        		$criteria->params=array(":shiping_id"=>$id);
+        		$modelDetail=$modelDetail->findAll($criteria);
+
+        		$model=$model->findByPk($id);
+
+	    		$this->render('ShipingForm',array(
+					'model'=>$model,'id'=>$id
+				));		
+	    	}
+
+	         
+
+
+		}
+		else
+		{
+			//$modelDetail=new Shipingdetail();
+
+			$this->render('ShipingForm',array(
+				'model'=>$model,
+			));
+		}
+			
+	
+
 	}
 
 	/**
@@ -183,7 +265,7 @@ class ShipingController extends Controller
 	        $criteria->condition="member_name like :request";
 	        $criteria->params=array(':request'=> '%'.$request.'%');
 	        $criteria->limit=30;
-	        $model=Product::model()->findAll($criteria);
+	        $model=Member::model()->findAll($criteria);
 
 	        $data=array();
 	        foreach($model as $get)
