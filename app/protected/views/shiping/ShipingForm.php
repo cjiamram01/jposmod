@@ -39,8 +39,6 @@ function browseCustomer() {
     var w = window.showModalDialog(uri, null, options);
 
     if (w != null) {
-      //alert(w.Shiping_customer);
-      /*$("input[name=customer_code]").val(w.customer_code);*/
       $("input[id=Shiping_customer]").val(w.Shiping_customer);
     }
   }
@@ -248,10 +246,15 @@ $(function() {
 		      ?>
 			</div>
 			<div class="col-sm-1">
-				<a href="#" class="btn btn-primary" onclick="document.formShiping.submit()">
+				
+        <?php $id= Yii::app()->request->getParam('id'); ?>
+         <?php if(!isset($id)): ?> 
+
+        <a href="#" class="btn btn-primary" onclick="document.formShiping.submit()">
                  <i class="glyphicon glyphicon-floppy-disk"></i>
                 บันทึก
               	</a>
+           <?php endif; ?> 
 			</div>
 		</div>
 	</td>

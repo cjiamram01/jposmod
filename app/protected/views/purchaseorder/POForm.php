@@ -136,7 +136,7 @@ function computeTotal()
    {
     if (confirm('ทำการสั่งซื้อใหม่?')) 
     {
-      window.location='<?php echo $strPath; ?>/Basic/PO';
+      window.location='<?php echo $strPath; ?>/Purchaseorder/PO';
     }
    }
 
@@ -151,7 +151,7 @@ function computeTotal()
   function modifyPO(id)
   {
 
-        var uri = "<?php echo $strPath; ?>/basic/PO/"+id;
+        var uri = "<?php echo $strPath; ?>/PurchaseOrder/PO/"+id;
         window.location=uri;
   }
 

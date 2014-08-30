@@ -10951,3 +10951,110 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/jpos/app/basic/PO
 ---
+2014/08/30 06:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ChooseItem".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('ChooseItem')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('ChooseItem')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('purchasedetail/...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/purchasedetail/ChooseItem
+---
+2014/08/30 06:53:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PO".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PO')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PO')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('purchasedetail/...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/purchasedetail/PO
+---
+2014/08/30 06:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PO".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PO')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PO')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PO')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PO/70
+HTTP_REFERER=http://localhost/jpos/app/PurchaseOrder/PO
+---
+2014/08/30 06:55:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PO".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PO')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PO')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PO')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PO/68
+HTTP_REFERER=http://localhost/jpos/app/PurchaseOrder/PO
+---
+2014/08/30 06:55:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PO".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PO')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PO')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PO')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PO/70
+HTTP_REFERER=http://localhost/jpos/app/PurchaseOrder/PO
+---
+2014/08/30 06:56:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PO".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PO')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PO')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PO')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PO/70
+HTTP_REFERER=http://localhost/jpos/app/PurchaseOrder/PO
+---
+2014/08/30 06:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PO".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PO')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PO')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PO')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PO/70
+HTTP_REFERER=http://localhost/jpos/app/PurchaseOrder/PO
+---
+2014/08/30 09:15:16 [error] [exception.CException] exception 'CException' with message 'ReceivedController cannot find the requested view "create".' in C:\xampp\htdocs\jpos\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#1 C:\xampp\htdocs\jpos\app\protected\controllers\ReceivedController.php(81): CController->render('create', Array)
+#2 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): ReceivedController->actionReceive()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('Receive')
+#7 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Received/Receiv...')
+#8 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/jpos/app/Received/Receive
+---
+2014/08/30 09:16:17 [error] [php] Undefined variable: form (C:\xampp\htdocs\jpos\app\protected\views\received\ReceivedForm.php:41)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(869): ReceivedController->renderFile()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(782): ReceivedController->renderPartial()
+#2 C:\xampp\htdocs\jpos\app\protected\controllers\ReceivedController.php(81): ReceivedController->render()
+#3 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): ReceivedController->actionReceive()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(286): ReceivedController->runAction()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(265): ReceivedController->runActionWithFilters()
+#7 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): ReceivedController->run()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Received/Receive
+in C:\xampp\htdocs\jpos\app\protected\views\received\ReceivedForm.php (41)
+in C:\xampp\htdocs\jpos\app\protected\controllers\ReceivedController.php (81)
+in C:\xampp\htdocs\jpos\app\index.php (16)
