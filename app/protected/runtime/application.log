@@ -10941,3 +10941,13 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/jpos/app/purchaseorder/GetSupplierJson?term=%E0%B8%94%E0%B8%B5
 ---
+2014/08/30 06:30:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PO".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PO')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PO')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/PO')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/PO
+---

@@ -51,24 +51,7 @@ class PurchasedetailController extends Controller
 	    }
 	
 
-	public function actionChooseItem()
-	{
-		$modelDetail=new Purchasedetail();
-		if(isset($_POST['Purchasedetail']))
-		{
-			$product_id=$_POST['product_id'];
-			$modelDetail->item_id=$product_id;
-			$id= Yii::app()->request->getParam('id');
-			$model->PurchaseOrder_id=$id;
-			if(isset($id))
-			{
-				echo "complete";
-				if($model->save())
-					$this->redirect(array('//basic/PO','id'=>$id));				
-			}
-		}
-
-	}
+	
 
 
 	public function actionGetProductJson()

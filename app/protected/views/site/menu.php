@@ -20,6 +20,20 @@
 
       </ul>
     </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        สั่งซื้อ/รับสินค้า/ส่งสินค้า<b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+
+        <?php $strPath= Yii::app()->baseUrl; ?>
+        <li><a href="<?php echo $strPath; ?>/PurchaseOrder/PO">สั่งซื้อ</a></li> 
+        <li><a href="<?php echo $strPath; ?>/Shiping/Ship">ส่งสินค้า</a></li>
+      
+
+      </ul>
+    </li>
     
     <?php $user = User::model()->findByPk(Yii::app()->request->cookies['user_id']->value); ?>
     <?php if (!empty($user)): ?>
@@ -34,14 +48,7 @@
             รายงานยอดขาย
           </a>
           <ul class="dropdown-menu">
-            <!--<li><a href="index.php?r=Report/SalePerDay">ยอดขายประจำวัน</a></li>
-            <li><a href="index.php?r=Report/SaleSumPerDay">สรุปยอดขายตามวัน</a></li>
-            <li><a href="index.php?r=Report/SaleSumPerMonth">สรุปยอดขายตามเดือน</a></li>
-            <li><a href="index.php?r=Report/SaleSumPerType">สรุปยอดขายตามประเภท</a></li>
-            <li><a href="index.php?r=Report/SaleSumPerMember">สรุปยอดขายตามสมาชิก</a></li>
-            <li><a href="index.php?r=Report/SaleSumPerEmployee">สรุปยอดขายตามพนักงาน</a></li>-->
-
-             <li><a href="<?php echo $strPath; ?>/Report/SalePerDay">ยอดขายประจำวัน</a></li>
+            <li><a href="<?php echo $strPath; ?>/Report/SalePerDay">ยอดขายประจำวัน</a></li>
             <li><a href="<?php echo $strPath; ?>/Report/SaleSumPerDay">สรุปยอดขายตามวัน</a></li>
             <li><a href="<?php echo $strPath; ?>/Report/SaleSumPerMonth">สรุปยอดขายตามเดือน</a></li>
             <li><a href="<?php echo $strPath; ?>/Report/SaleSumPerType">สรุปยอดขายตามประเภท</a></li>
@@ -54,6 +61,12 @@
         <li><a href="<?php echo $strPath; ?>/Report/ReportIR">รายงานเจ้าหนี้</a></li>
       </ul>
     </li>
+
+   
+  
+
+
+
 
     <li class="dropdown">
       <a href="#" data-toggle="dropdown" class="dropdown-toggle">
