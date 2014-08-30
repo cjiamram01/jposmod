@@ -156,10 +156,20 @@ function computeTotal()
   }
 
    window.onload = function() {
-   // $("input[name=product_code]").focus();
    computeTotal();
   }
 
+
+$(function() {
+  $("#supplier_name").autocomplete(
+  {
+      source:'<?php echo $strPath; ?>/GetSupplierJson.php',
+      minLength: 2,
+      select: function( event, ui )
+      {$("input[id=hdnSuppId]").val(ui.item.id);}
+  })
+
+});
 
 
 $(function() {
@@ -198,25 +208,7 @@ $(function() {
 
    <div class="panel-body">
    	 <?php
-    $form = $this->beginWidget('CActiveForm', array(
-        'htmlOptions' => array(
-            'name' => 'formPO',
-            'id' => 'formPO'
-        )
-    ));
-
-    $form->errorSummary($model);
-    ?>
-
-     <table width="100%">
-      <tr>
-       <td>
-       	<div class="form-group">
-
-		<?php echo $form->labelEx($model,'supplier_id',array('class'=>'col-sm-2 control-label')); ?>
-		<div class="col-sm-10">
-     
-       <?php
+  
                     $id= Yii::app()->request->getParam('id');
                     $po_no="";
                     $quotation_no="";
@@ -229,7 +221,28 @@ $(function() {
                       $order_date=$model->order_date;
                       $supplier= $model->getSupplier($id);
                     }
-            ?>
+          
+
+    $form = $this->beginWidget('CActiveForm', array(
+        'htmlOptions' => array(
+            'name' => 'formPO',
+            'id' => 'formPO'
+        )
+    ));
+
+
+
+    $form->errorSummary($model);
+    ?>
+
+     <table width="100%">
+      <tr>
+       <td>
+       	<div class="row">
+
+		<?php echo $form->labelEx($model,'supplier_id',array('class'=>'col-sm-2 control-label')); ?>
+		<div class="col-sm-3">
+     
 
       <input type='hidden' id='hdnSuppId' value="<?php
             if(isset($supplier))
@@ -245,24 +258,27 @@ $(function() {
                 if(isset($supplier))
                   echo $supplier['farmer_name'];
               ?>" 
-               disabled="disabled" 
+              
                class="form-control"
-               style="width: 300px" />
-          <a href="#" onclick="browseSupplier()" class="btn btn-primary">
+               />
+   </div>
+   <div class="col-sm-3">
+    <a href="#" onclick="browseSupplier()" class="btn btn-primary">
           <i class="glyphicon glyphicon-search"></i>
           ...</a>
-         </div>
-		<div class="form-group">
+   </div>
+  </div>
+		<div class="row">
           	<?php echo $form->labelEx($model,'po_no',array('class'=>'col-sm-2 control-label')); ?>
           	<div class="col-sm-2">
-          				<?php echo $form->textField($model,'po_no',array('maxlength'=>20,'class'=>'form-control','style'=>'width: 300px' ,'value'=> $po_no)); ?>
+          				<?php echo $form->textField($model,'po_no',array('maxlength'=>20,'class'=>'form-control' ,'value'=> $po_no)); ?>
             </div>
             <?php echo $form->labelEx($model,'quotation_no',array('class'=>'col-sm-2 control-label')); ?>
 
               <div class="col-sm-2">
-                  <?php echo $form->textField($model,'quotation_no',array('maxlength'=>20,'class'=>'form-control','style'=>'width: 300px','value'=>$quotation_no)); ?>
+                  <?php echo $form->textField($model,'quotation_no',array('maxlength'=>20,'class'=>'form-control','value'=>$quotation_no)); ?>
             </div>
-  	 		<?php echo $form->labelEx($model,'order_date',array('class'=>'col-sm-2 control-label')); ?>
+  	 		<?php echo $form->labelEx($model,'order_date',array('class'=>'col-sm-1 control-label')); ?>
   	 		<div class="col-sm-2">
   	 			 <input type="text" name="order_date" class="form-control calendar" 
 

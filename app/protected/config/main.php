@@ -42,6 +42,7 @@ return array(
 			'urlFormat'=>'path',
 			'rules'=>array(
 				'GetProductJson.php'=>'purchasedetail/GetProductJson',
+				'GetSupplierJson.php'=>'purchaseorder/GetSupplierJson',
 				'GetCustomer.php'=>'shiping/GetCustomer',
 				'ModifyPurchaseDetail.php'=>'Ajax/ModifyPurchaseDetail',
 				'ModifyShipingDetail.php'=>'Ajax/ModifyShipingDetail',

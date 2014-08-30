@@ -10846,3 +10846,98 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/jpos/app/Dialog/Shiping
 ---
+2014/08/30 05:44:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Create".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('Create')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('Create')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Shiping/Create')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Shiping/Create/18
+HTTP_REFERER=http://localhost/jpos/app/Shiping/Ship
+---
+2014/08/30 05:44:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Create".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('Create')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('Create')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Shiping/Create')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Shiping/Create/18
+HTTP_REFERER=http://localhost/jpos/app/Shiping/Ship
+---
+2014/08/30 05:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Create".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('Create')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('Create')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Shiping/Create')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Shiping/Create/18
+HTTP_REFERER=http://localhost/jpos/app/Shiping/Ship
+---
+2014/08/30 05:45:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Create".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('Create')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('Create')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Shiping/Create')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Shiping/Create/18
+HTTP_REFERER=http://localhost/jpos/app/Shiping/Ship
+---
+2014/08/30 05:51:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PO".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PO')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PO')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('purchasedetail/...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/purchasedetail/PO
+---
+2014/08/30 06:07:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GetSupplierJson".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GetSupplierJson')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GetSupplierJson')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('purchaseorder/G...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/GetSupplierJson.php?term=%E0%B8%94%E0%B8%B5
+HTTP_REFERER=http://localhost/jpos/app/purchaseOrder/PO
+---
+2014/08/30 06:08:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GetSupplierJson".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GetSupplierJson')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GetSupplierJson')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('purchaseorder/G...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/GetSupplierJson.php?term=%E0%B8%94%E0%B8%B5
+---
+2014/08/30 06:08:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GetSupplierJson".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GetSupplierJson')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GetSupplierJson')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('purchaseorder/G...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/purchaseorder/GetSupplierJson
+---
+2014/08/30 06:08:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GetSupplierJson".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GetSupplierJson')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GetSupplierJson')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('purchaseorder/G...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/purchaseorder/GetSupplierJson?term=%E0%B8%94%E0%B8%B5
+---

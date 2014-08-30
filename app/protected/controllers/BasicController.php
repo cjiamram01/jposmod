@@ -512,7 +512,7 @@ class BasicController extends Controller {
 
   }
 
-  public function actionPO()
+  /*public function actionPO()
   {
    $model=new Purchaseorder();
    if(isset($_POST['Purchaseorder']))//Save when system to be post PO.
@@ -570,16 +570,16 @@ class BasicController extends Controller {
         $this->render('//purchaseorder/POForm',array('model'=>$model,'modelDetail'=>$modelDetail,));
 
     }
-  }
+  }*/
 
-  public function actionShiping()
+  /*public function actionShiping()
   {
 
       $model =new Shiping();
 
       $this->render('//shiping/ShipingForm',array('model'=>$model,));
 
-  }
+  }*/
 
 	// END SALE
   public function actionEndSale() {

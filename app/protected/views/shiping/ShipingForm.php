@@ -117,7 +117,7 @@ function computeTotal()
   function modifyShiping(id)
   {
 
-        var uri = "<?php echo $strPath; ?>/Shiping/Create/"+id;
+        var uri = "<?php echo $strPath; ?>/Shiping/Ship/"+id;
         window.location=uri;
   }
 
@@ -141,7 +141,7 @@ $(function() {
    {
     if (confirm('ทำการส่งสินค้่าใหม่?')) 
     {
-      window.location='<?php echo $strPath; ?>/Shiping/create';
+      window.location='<?php echo $strPath; ?>/Shiping/Ship';
     }
    }
 

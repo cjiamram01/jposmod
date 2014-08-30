@@ -56,11 +56,13 @@ class ShipingController extends Controller
 		));
 	}
 
+
+
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionShip()
 	{
 		$model=new Shiping;
 
