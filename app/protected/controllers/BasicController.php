@@ -443,6 +443,21 @@ class BasicController extends Controller {
     ));
   }
 
+
+  public function actionReceiveTransactionDelete($id)
+  {
+        $receive_id= Yii::app()->request->getParam('receive_id');
+        if(isset($id))
+        {
+          $receiveTransaction=Receivetransaction::model()->findByPk($id);
+          $receiveTransaction->delete();
+          $this->redirect(array('received/Receive','receive_id'=>$receive_id));
+
+
+        }
+
+  }
+
   public function actionShipingDetailDelete($pid)
   {
     $id= Yii::app()->request->getParam('id');
@@ -450,10 +465,12 @@ class BasicController extends Controller {
     {
         $shipingDetail=Shipingdetail::model()->findByPk($pid);
         $shipingDetail->delete();  
-        $this->redirect(array('Shiping/create','id'=>$id));
+        $this->redirect(array('Shiping/ship','id'=>$id));
     }
 
   }
+
+
 
   public function actionPurchaseDetailDelete($pid)
   {
@@ -462,7 +479,7 @@ class BasicController extends Controller {
     {
         $purchaseDetail=Purchasedetail::model()->findByPk($pid);
         $purchaseDetail->delete();  
-        $this->redirect(array('basic/PO','id'=>$id));
+        $this->redirect(array('Purchaseorder/PO','id'=>$id));
     }
 
   }

@@ -29,6 +29,7 @@
 
         <?php $strPath= Yii::app()->baseUrl; ?>
         <li><a href="<?php echo $strPath; ?>/PurchaseOrder/PO">สั่งซื้อ</a></li> 
+        <li><a href="<?php echo $strPath; ?>/Received/receive">รับสินค้า</a></li> 
         <li><a href="<?php echo $strPath; ?>/Shiping/Ship">ส่งสินค้า</a></li>
       
 

@@ -43,9 +43,12 @@ return array(
 			'rules'=>array(
 				'GetProductJson.php'=>'purchasedetail/GetProductJson',
 				'GetSupplierJson.php'=>'purchaseorder/GetSupplierJson',
+				'GetPOJson.php'=>'Received/GetPOJson',
 				'GetCustomer.php'=>'shiping/GetCustomer',
 				'ModifyPurchaseDetail.php'=>'Ajax/ModifyPurchaseDetail',
 				'ModifyShipingDetail.php'=>'Ajax/ModifyShipingDetail',
+				'ModifyReceivedTransaction.php'=>'Ajax/ModifyReceivedTransaction',
+				'DuplicatePO.php'=>'Ajax/DuplicatedPO',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',

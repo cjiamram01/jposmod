@@ -196,6 +196,85 @@ class DialogController extends CController {
 
   }
 
+
+  public function actionDialogBrowsPO()
+  {
+    
+    $purchaseOrder=new PurchaseOrder();
+      $model = new CActiveDataProvider($purchaseOrder, array(
+        'sort' => array(
+            'defaultOrder' => 'id DESC'
+        )
+    ));
+
+      if (!empty($_POST)) {
+
+      $search= $_POST['search'];
+      $criteria1 =new CDbCriteria();
+      
+      $criteria1->select ="farmer_id";
+      $criteria1->condition="farmer_name=:farmer_name";
+      $criteria1->params=array(':farmer_name'=>$search); 
+      $modelSupp=new Farmer($criteria1);
+
+      //print_r($modelSupp->farmer_id."xxxxxx");
+      
+      $criteria = new CDbCriteria();
+      $criteria->compare('supplier_id', $modelSupp->farmer_id, true, 'OR');
+      $criteria->compare('order_date', $search, true, 'OR');
+      $criteria->compare('quotation_no', $search, true, 'OR');
+      $criteria->compare('po_no', $search, true, 'OR');
+      $criteria->compare('Comment', $search, true,'OR');
+
+      $model->setCriteria($criteria);
+    }
+    
+
+    $pagination = new CPagination();
+    $pagination->setPageSize(10);
+
+    $model->setPagination($pagination);
+
+    $this->render('//Dialog/DialogBrowsPO', array(
+        'model' => $model
+    ));
+    
+
+  }
+
+
+  public function actionDialogSearchReceived()
+  {
+        $received=new Received();
+          $model = new CActiveDataProvider($received, array(
+            'sort' => array(
+                'defaultOrder' => 'id DESC'
+            )
+        ));
+
+      if (!empty($_POST)) 
+      {
+
+          $search= $_POST['search'];
+          $criteria = new CDbCriteria();
+          $criteria->compare('receive_date', $search, true, 'OR');
+          $criteria->compare('transport_supplier', $search, true, 'OR');
+          $criteria->compare('po_no', $search, true, 'OR');
+
+          $model->setCriteria($criteria);
+      }
+    
+
+    $pagination = new CPagination();
+    $pagination->setPageSize(10);
+
+    $model->setPagination($pagination);
+
+    $this->render('//Dialog/DialogSearchReceived', array(
+        'model' => $model
+    ));
+  }
+
   public function actionDialogReprintBill()
   {
       $saleBill=new BillSale();

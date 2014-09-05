@@ -102,7 +102,7 @@ class ShipingController extends Controller
 			if($model->save())
 			{
  				$id=$model->id;
- 				$this->redirect(array('create','id'=>$id)); 
+ 				$this->redirect(array('ship','id'=>$id)); 
 			}
 		}
 

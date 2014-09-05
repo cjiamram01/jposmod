@@ -1,4 +1,4 @@
-p<?php
+<?php
 
 class BillSaleDetail extends CActiveRecord {
     

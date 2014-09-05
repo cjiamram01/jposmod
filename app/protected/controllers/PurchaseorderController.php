@@ -74,7 +74,6 @@ public function actionGetSupplierJson()
 
           $this->redirect(array('PO','id'=>$id)); 
         }
-       // print_r($modelDetail->getErrors());
       }
     }
 
