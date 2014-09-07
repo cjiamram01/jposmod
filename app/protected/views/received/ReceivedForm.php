@@ -190,7 +190,16 @@ function receiveReset()
           <?php echo $form->labelEx($model,'po_no',array('class'=>'col-sm-2')); ?>
           <div class="col-sm-2">
           <input type='hidden' id="po_id" name="po_id">
-          <?php echo $form->textField($model,'po_no',array('size'=>20,'maxlength'=>20,'class'=>'form-control')); ?>
+          
+          <?php
+            $receive_id= Yii::app()->request->getParam('receive_id');
+
+            if(!isset($receive_id)) 
+              echo $form->textField($model,'po_no',array('size'=>20,'maxlength'=>20,'class'=>'form-control')); 
+            else
+              echo $form->textField($model,'po_no',array('size'=>20,'maxlength'=>20,'class'=>'form-control','disabled'=>'true')); 
+
+          ?>
           </div>
            <div class="col-sm-1">
             <a href="#" onclick="browsePO();" class="btn btn-primary">
@@ -199,8 +208,19 @@ function receiveReset()
            </div>
 
            <?php echo $form->labelEx($model,'receive_date',array('class'=>'col-sm-1')); ?>
+
           <div class="col-sm-2">
-              <?php echo $form->textField($model,'receive_date',array('class'=>'form-control calendar','style'=>'width:100px')); ?>
+              <!--<?php echo $form->textField($model,'receive_date',array('class'=>'form-control calendar','style'=>'width:100px')); ?>-->
+               <input type="text" name="receive_date" class="form-control calendar" 
+
+              value="<?php 
+                if(isset($supplier))
+                  echo date("d/m/Y", strtotime($receive_date));
+                else
+                  echo date("d/m/Y");
+
+              ?>"
+               style="width: 120px" />
    
           </div>
         </div>

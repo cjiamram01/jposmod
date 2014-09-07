@@ -124,7 +124,10 @@ function computeTotal()
   {
     var uri = "<?php echo $strPath; ?>/Dialog/DialogSupplier";
     var options = "dialogWidth=750px; dialogHeight=400px";
+    //var options = "width=750px; height=400px";
     var w = window.showModalDialog(uri, null, options);
+    //var w = window.open(uri,null,options);
+
     if (w != null) 
     {
       $("input[id=supplier_name]").val(w.supplier_name);
