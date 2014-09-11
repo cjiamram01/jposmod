@@ -1,7 +1,8 @@
+<?php $strPath= Yii::app()->baseUrl; ?>
 <script type="text/javascript">
   
   function dialogGroupProduct() {
-    var url = 'index.php?r=Dialog/DialogGroupProduct';
+    var url = '<?php echo $strPath; ?>/Dialog/DialogGroupProduct';
     var option = 'dialogWidth: 600px; dialogHeight: 500px';
 
     var w = window.showModalDialog(url, null, option);
@@ -30,7 +31,7 @@
 
   function genProductCode() {
     $.ajax({
-      url: 'index.php?r=Ajax/genProductCode',
+      url: '<?php echo $strPath; ?>/Ajax/genProductCode',
       cache: false,
       success: function(data) {
         $("#Product_product_code").val(data);
@@ -40,7 +41,7 @@
 
   function printBarCode() {
     var barcode = $("#Product_product_code").val();
-    var url = 'index.php?r=Ajax/PrintBarCode&barcode=' + barcode;
+    var url = '<?php echo $strPath; ?>/Ajax/GenerateBarCode?barcode=' + barcode;
     var $opt = 'dialogWidth: 300; dialogHeight: 100';
 
     window.showModalDialog(url, null, $opt);

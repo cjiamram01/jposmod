@@ -1,7 +1,8 @@
+<?php $strPath= Yii::app()->baseUrl; ?>
 <div class="panel panel-primary" style="margin: 10px">
   <div class="panel-heading">ตัวแทนจำหน่าย</div>
   <div class="panel-body">
-    <a href="index.php?r=Config/FarmerForm" class="btn btn-primary">
+    <a href="<?php echo $strPath ?>/Config/FarmerForm" class="btn btn-primary">
       <b class="glyphicon glyphicon-plus"></b>
       เพิ่มรายการ
     </a>

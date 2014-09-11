@@ -2,6 +2,20 @@
 
 class AjaxController extends Controller {
 
+  
+  public function actionGenerateBarCode() 
+  {
+    $barcode= Yii::app()->request->getParam('barcode');
+    if(isset($barcode))
+    {
+
+      $barcode = new Barcode39($barcode);
+      $barcode->draw();
+    }
+  }
+
+
+
   public function actionGetGroupProductInfo($group_product_code) {
     $attributes = array();
     $attributes["group_product_code"] = $group_product_code;
@@ -9,6 +23,9 @@ class AjaxController extends Controller {
     $model = GroupProduct::model()->findByAttributes($attributes);
     echo CJSON::encode($model);
   }
+
+
+
 
 
   public function actionDuplicatedPO()
@@ -81,7 +98,8 @@ class AjaxController extends Controller {
     echo CJSON::encode($model);
   }
 
-  public function actionPrintBarCode($barcode = null) {
+  public function actionPrintBarCode($barcode = null) 
+  {
     $barcode = new Barcode39($barcode);
     $barcode->draw();
   }

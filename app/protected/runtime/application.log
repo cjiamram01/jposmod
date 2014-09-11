@@ -11984,3 +11984,552 @@ in C:\xampp\htdocs\jpos\app\index.php (16)
 2014/09/05 21:41:35 [warning] [application] Failed to set unsafe attribute "org_logo" of "Organization".
 in C:\xampp\htdocs\jpos\app\protected\controllers\ConfigController.php (9)
 in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/08 10:17:33 [warning] [application] Failed to set unsafe attribute "org_logo" of "Organization".
+in C:\xampp\htdocs\jpos\app\protected\controllers\ConfigController.php (9)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/08 19:55:33 [warning] [application] Failed to set unsafe attribute "org_logo" of "Organization".
+in C:\xampp\htdocs\jpos\app\protected\controllers\ConfigController.php (9)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/10 06:27:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-2.0.0.min.js".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('jquery-2.0.0.mi...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/jquery-2.0.0.min.js
+HTTP_REFERER=http://localhost/jpos/app/TestCamera.php
+---
+2014/09/10 06:27:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quantize.js".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('quantize.js')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/quantize.js
+HTTP_REFERER=http://localhost/jpos/app/TestCamera.php
+---
+2014/09/10 06:27:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "color-thief.js".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('color-thief.js')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/color-thief.js
+HTTP_REFERER=http://localhost/jpos/app/TestCamera.php
+---
+2014/09/10 06:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "quantize.js".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('quantize.js')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/quantize.js
+HTTP_REFERER=http://localhost/jpos/app/TestCamera.php
+---
+2014/09/10 06:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-2.0.0.min.js".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('jquery-2.0.0.mi...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/jquery-2.0.0.min.js
+HTTP_REFERER=http://localhost/jpos/app/TestCamera.php
+---
+2014/09/10 06:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "color-thief.js".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('color-thief.js')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/color-thief.js
+HTTP_REFERER=http://localhost/jpos/app/TestCamera.php
+---
+2014/09/10 09:03:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/MemberForm
+HTTP_REFERER=http://localhost/jpos/app/Config/MemberIndex
+---
+2014/09/10 09:03:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/ProductForm
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductIndex
+---
+2014/09/10 09:03:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410332631285
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:03:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/PrintBarCode&barcode=
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:04:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/genProductCode&_=1410332631286
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:04:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/genProductCode&_=1410332631287
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:04:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/PrintBarCode&barcode=100101
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/ProductForm
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductIndex
+---
+2014/09/10 09:05:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/ProductForm
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductIndex
+---
+2014/09/10 09:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/ProductForm
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductIndex
+---
+2014/09/10 09:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410333103028
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410333109250
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:18:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410333520842
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:18:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/FarmerForm
+HTTP_REFERER=http://localhost/jpos/app/Config/FarmerIndex
+---
+2014/09/10 09:20:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/MemberForm
+HTTP_REFERER=http://localhost/jpos/app/Config/MemberIndex
+---
+2014/09/10 09:21:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/UserForm
+HTTP_REFERER=http://localhost/jpos/app/Config/UserIndex
+---
+2014/09/10 09:24:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Config/BranchForm
+HTTP_REFERER=http://localhost/jpos/app/Config/BranchIndex
+---
+2014/09/10 09:35:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410334552898
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:43:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410335004640
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:43:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/PrintBarCode&barcode=
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:44:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410335093536
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/PrintBarCode&barcode=123455
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:45:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410335156401
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:46:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=123455".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=123455
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:46:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=123455".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=123455
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:50:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=123455".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=123455
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:50:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=123455".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=123455
+---
+2014/09/10 09:52:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=123455".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=123455
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:54:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410335653146
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:55:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410335721884
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:55:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=123455".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=123455
+---
+2014/09/10 09:58:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=123455".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=123455
+---
+2014/09/10 09:58:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GenerateBarCode&barcode=123455".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GenerateBarCode...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GenerateBarCode...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/GenerateBa...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/GenerateBarCode&barcode=123455
+---
+2014/09/10 09:58:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 09:59:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=12333333".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=12333333
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 10:00:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "PrintBarCode&barcode=12333333".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('PrintBarCode&ba...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('PrintBarCode&ba...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/PrintBarCo...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/PrintBarCode&barcode=12333333
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 10:01:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410336081343
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 10:01:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GenerateBarCode&barcode=".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GenerateBarCode...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GenerateBarCode...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/GenerateBa...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/GenerateBarCode&barcode=
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 10:01:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GenerateBarCode&barcode=1233333".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GenerateBarCode...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GenerateBarCode...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/GenerateBa...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/GenerateBarCode&barcode=1233333
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 10:01:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GenerateBarCode&barcode=1233333".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GenerateBarCode...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GenerateBarCode...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/GenerateBa...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/GenerateBarCode&barcode=1233333
+---
+2014/09/10 10:02:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GenerateBarCode&barcode=1233333".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('GenerateBarCode...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GenerateBarCode...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Ajax/GenerateBa...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Ajax/GenerateBarCode&barcode=1233333
+---
+2014/09/10 10:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=&_=1410336269166
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---
+2014/09/10 10:04:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Config/index.ph...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=1001&_=1410336269168
+HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
+---

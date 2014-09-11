@@ -1,7 +1,8 @@
+<?php $strPath= Yii::app()->baseUrl; ?>
 <div class="panel panel-primary" style="margin: 10px">
     <div class="panel-heading">ข้อมูลผู้ใช้งานระบบ</div>
     <div class="panel-body">
-			<a href="index.php?r=Config/UserForm" class="btn btn-primary">
+			<a href="<?php echo $strPath; ?>/Config/UserForm" class="btn btn-primary">
 				<b class="glyphicon glyphicon-plus"></b>
 				เพิ่มรายการ
 			</a>
