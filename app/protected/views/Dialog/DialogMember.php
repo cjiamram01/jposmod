@@ -1,11 +1,14 @@
 <script type="text/javascript">
   function chooseRecord(member_code, member_name) {
-    var member = {
+   /* var member = {
       member_code: member_code,
       member_name: member_name
-    };
+    };*/
 
-    window.returnValue = member;
+    //window.returnValue = member;
+    window.opener.member_code.value=member_code;
+    window.opener.member_name.value=member_name;
+
     window.close();
   }
 </script>

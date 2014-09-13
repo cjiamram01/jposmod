@@ -1,11 +1,10 @@
 <script type="text/javascript">
-  function chooseRecord(supplier_id, supplier_name) {
-    var supplier = {
-      supplier_id: supplier_id,
-      supplier_name: supplier_name
-    };
-
-    window.returnValue = supplier;
+  function chooseRecord(supplier_id, supplier_name) 
+  {
+  
+    window.opener.hdnSuppId.value=supplier_id;
+    window.opener.supplier_name.value=supplier_name;
+   
     window.close();
   }
 </script>

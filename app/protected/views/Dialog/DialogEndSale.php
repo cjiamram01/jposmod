@@ -30,7 +30,8 @@
             },
             success: function(data) 
             {
-                window.returnValue = true;
+                //window.returnValue = true;
+                window.opener.endSale();
                 window.close();
             }
         });

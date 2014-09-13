@@ -119,20 +119,47 @@ function computeTotal()
    var URL = '<?php echo $strPath; ?>/ModifyPurchaseDetail.php?pid='+pid+'&price='+price+'&qty='+qty;
   }
 
+  function PopupCenter(url, title, w, h) 
+  {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'directories=0,titlebar=0,addressbar=0,scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+        if (window.focus) 
+        {
+            newWindow.focus();
+        }
+   }
 
   function browseSupplier() 
   {
     var uri = "<?php echo $strPath; ?>/Dialog/DialogSupplier";
-    var options = "dialogWidth=750px; dialogHeight=400px";
+    //var options = "dialogWidth=750px; dialogHeight=400px";
     //var options = "width=750px; height=400px";
-    var w = window.showModalDialog(uri, null, options);
+    //var w = window.showModalDialog(uri, null, options);
     //var w = window.open(uri,null,options);
 
-    if (w != null) 
+   /* if (w != null) 
     {
       $("input[id=supplier_name]").val(w.supplier_name);
       $("input[id=hdnSuppId]").val(w.supplier_id);
-    }
+    }*/
+    var w=750;
+    var h=400;
+    var title="Brows purchase order.";
+
+    PopupCenter(uri,title,w,h);
+
+   
+
   }
 
    function poReset() 
@@ -147,8 +174,9 @@ function computeTotal()
    function poModify() 
    {
         var uri = "<?php echo $strPath; ?>/Dialog/DialogSearchPO";
-        var options = "dialogWidth=750px; dialogHeight=400px";
-        var w = window.showModalDialog(uri, null, options);
+        //var options = "dialogWidth=750px; dialogHeight=400px";
+        //var w = window.showModalDialog(uri, null, options);
+        PopupCenter(uri,"Brows PO.",750,400);
    }
 
   function modifyPO(id)
@@ -247,7 +275,7 @@ $(function() {
 		<div class="col-sm-3">
      
 
-      <input type='hidden' id='hdnSuppId' value="<?php
+      <input type='hidden' id='hdnSuppId'  value="<?php
             if(isset($supplier))
             {
               echo $supplier['farmer_id'];

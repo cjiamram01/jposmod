@@ -1,11 +1,15 @@
 <script type="text/javascript">
   function chooseRecord(customer_code, customer_name) {
-    var cust = {
+    /*var cust = {
       customer_code: customer_code,
       Shiping_customer: customer_name
     };
 
-    window.returnValue = cust;
+    window.returnValue = cust;*/
+
+    window.opener.customer_code.value=customer_code;
+    window.opener.Shiping_customer.value=customer_name;
+
     window.close();
   }
 </script>

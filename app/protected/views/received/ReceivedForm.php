@@ -33,6 +33,26 @@
 <script type='text/javascript'>
 <?php $strPath= Yii::app()->baseUrl; ?>
 
+function PopupCenter(url, title, w, h) 
+  {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'directories=0,titlebar=0,addressbar=0,scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+        if (window.focus) 
+        {
+            newWindow.focus();
+        }
+   }
+
 function modifyReceivedTransaction(rid,index)
   {
     //var qty=document.getElementById("txtreceive_qty"+index).value;
@@ -85,14 +105,25 @@ $(function() {
 function browsePO() 
   {
     var uri = "<?php echo $strPath; ?>/Dialog/DialogBrowsPO";
-    var options = "dialogWidth=750px; dialogHeight=400px";
+
+    PopupCenter(uri,"Browse PO",750,400);
+
+    /*var options = "dialogWidth=750px; dialogHeight=400px";
     var w = window.showModalDialog(uri, null, options);
     if (w != null) 
     {
       $("input[id=po_id]").val(w.po_id);
       $("input[id=Received_po_no]").val(w.po_no);
        duplicatePO(w.po_id);
-    }
+    }*/
+
+     /* var left = (screen.width/2)-(w/2);
+      var top = (screen.height/2)-(h/2);
+      var w=750;
+      var h=400;
+      title="Brows PO";
+      window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left)
+  */
   }
 
 
@@ -135,8 +166,9 @@ function receiveReset()
  function receiveModify() 
    {
         var uri = "<?php echo $strPath; ?>/Dialog/DialogSearchReceived";
-        var options = "dialogWidth=750px; dialogHeight=400px";
-        var w = window.showModalDialog(uri, null, options);
+        PopupCenter(uri,"Modify received.",750,400);
+        /*var options = "dialogWidth=750px; dialogHeight=400px";
+        var w = window.showModalDialog(uri, null, options);*/
    }
 
  function modifyReceived(id)

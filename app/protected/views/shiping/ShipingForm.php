@@ -33,14 +33,36 @@
 <script type='text/javascript'>
 <?php $strPath= Yii::app()->baseUrl; ?>
 
+
+function PopupCenter(url, title, w, h) 
+  {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'directories=0,titlebar=0,addressbar=0,scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+        if (window.focus) 
+        {
+            newWindow.focus();
+        }
+   }
+
 function browseCustomer() {
     var uri = "<?php echo $strPath; ?>/Dialog/DialogCustomer";
-    var options = "dialogWidth=800px; dialogHeight=600px";
+    PopupCenter(uri,"Browse Customer.",800,600);
+    /*var options = "dialogWidth=800px; dialogHeight=600px";
     var w = window.showModalDialog(uri, null, options);
 
     if (w != null) {
       $("input[id=Shiping_customer]").val(w.Shiping_customer);
-    }
+    }*/
   }
 
 function computePrice(i) 
@@ -108,8 +130,10 @@ function computeTotal()
    function shipingBrows() 
    {
         var uri = "<?php echo $strPath; ?>/Dialog/DialogSearchShiping";
-        var options = "dialogWidth=750px; dialogHeight=400px";
-        var w = window.showModalDialog(uri, null, options);
+        PopupCenter(uri,"Browse Shiping.",750,400);
+
+        /*var options = "dialogWidth=750px; dialogHeight=400px";
+        var w = window.showModalDialog(uri, null, options);*/
    }
 
   function modifyShiping(id)

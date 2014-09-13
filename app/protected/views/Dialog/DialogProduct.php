@@ -1,6 +1,8 @@
 <script type="text/javascript">
     function chooseProduct(product_code) {
-        window.returnValue = product_code;
+        //window.returnValue = product_code;
+        window.opener.product_code.value=product_code;
+        window.opener.saleSubmit();
         window.close();
     }
 </script>

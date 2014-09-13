@@ -32,26 +32,53 @@
 
     <?php $strPath= Yii::app()->baseUrl; ?>
 <script type="text/javascript">
+  
+  function PopupCenter(url, title, w, h) 
+  {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'directories=0,titlebar=0,addressbar=0,scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+        if (window.focus) 
+        {
+            newWindow.focus();
+        }
+      return newWindow; 
+   }
+
+
+   function saleSubmit()
+   {
+          document.formSale.submit();
+
+   }
+  
   function browseProduct() {
     var uri = "<?php echo $strPath; ?>/Dialog/DialogProduct";
-    var options = "dialogWidth=800px; dialogHeight=600px";
+    PopupCenter(uri,"Browse product.",800,600);
+    /*var options = "dialogWidth=800px; dialogHeight=600px";
     var w = window.showModalDialog(uri, null, options);
 
     if (w != null) {
       $("#product_code").val(w);
       document.formSale.submit();
-    }
+    }*/
   }
 
   function browseMember() {
     var uri = "<?php echo $strPath; ?>/Dialog/DialogMember";
-    var options = "dialogWidth=800px; dialogHeight=600px";
-    var w = window.showModalDialog(uri, null, options);
+    PopupCenter(uri,"Browse member.",800,600);
 
-    if (w != null) {
-      $("input[name=member_code]").val(w.member_code);
-      $("input[name=member_name]").val(w.member_name);
-    }
+
+   
   }
 
   function endSale() {
@@ -77,8 +104,20 @@
 
   function dialogEndSale() {
     if(checkAllowEndSale()==true){
-    var uri = "<?php echo $strPath; ?>/Dialog/DialogEndSale";
-    var options = "dialogWidth=800px; dialogHeight=420px";
+        var uri = "<?php echo $strPath; ?>/Dialog/DialogEndSale";
+        var w=PopupCenter(uri,"Dialog end sale.",800,420);
+        /*if (w != null) 
+          endSale();
+        else*/
+
+    }
+    else
+    {
+        alert("ชำระเงินเรียบร้อยแล้ว");
+
+    }
+
+    /*var options = "dialogWidth=800px; dialogHeight=420px";
     var w = window.showModalDialog(uri, null, options);
 
     if (w != null) {
@@ -89,7 +128,7 @@
     {
         alert("ชำระเงินเรียบร้อยแล้ว");
 
-    }
+    }*/
   }
 
   function saleReset() {
@@ -100,16 +139,20 @@
 
   function printSlip() {
     var uri = "<?php echo $strPath; ?>/Dialog/DialogPrintSlip";
-    var options = "dialogWidth=360px; dialogHeight=550px";
-    var w = window.showModalDialog(uri, null, options);
+    var w=PopupCenter(uri,"Print slip.",360,550);
+
+    //var options = "dialogWidth=360px; dialogHeight=550px";
+    //var w = window.showModalDialog(uri, null, options);
   }
 
   function printBillSendProduct() {
     //var uri = "index.php?r=Dialog/DialogBillSendProduct";
 
     var uri="<?php echo $strPath; ?>/Dialog/DialogReprintBill";
-    var options = "dialogWidth=800px; dialogHeight=650px";
-    var w = window.showModalDialog(uri, null, options);
+    var w=PopupCenter(uri,"Billing product .",800,650);
+
+    //var options = "dialogWidth=800px; dialogHeight=650px";
+    //var w = window.showModalDialog(uri, null, options);
   }
 
   function printBillTax() {
@@ -117,8 +160,10 @@
     //var options = "dialogWidth=800px; dialogHeight=650px";
     //var w = window.showModalDialog(uri, null, options);
     var uri="<?php echo $strPath; ?>/Dialog/DialogReprintBillVat";
-    var options = "dialogWidth=800px; dialogHeight=650px";
-    var w = window.showModalDialog(uri, null, options);
+    var w=PopupCenter(uri,"Billing VAT .",800,650);
+
+    //var options = "dialogWidth=800px; dialogHeight=650px";
+    //var w = window.showModalDialog(uri, null, options);
 
   }
 
@@ -214,7 +259,8 @@
     });
   }
 
-  window.onload = function() {
+  window.onload = function() 
+  {
     $("input[name=product_code]").focus();
   }
 

@@ -1,8 +1,9 @@
 <script type="text/javascript">
-  function chooseRecord(po_id) {
+  function chooseRecord(po_id) 
+  {
    
-
     window.opener.modifyPO(po_id);
+     //window.opener.duplicatePO(w.po_id);
     window.close();
   }
 </script>

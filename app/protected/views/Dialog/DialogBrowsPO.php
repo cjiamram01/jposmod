@@ -1,12 +1,15 @@
 <script type="text/javascript">
   function chooseRecord(po_id,po_no) {
    
-    var po = {
+    /*var po = {
       po_no: po_no,
       po_id: po_id
-    };
+    };*/
 
-    window.returnValue = po;
+    //window.returnValue = po;
+    window.opener.Received_po_no.value=po_no;
+    window.opener.po_id.value=po_id
+    window.opener.duplicatePO(po_id);
     window.close();
     //window.opener.modifyPO(po_id);
     //window.close();
