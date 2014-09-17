@@ -54,15 +54,11 @@ function PopupCenter(url, title, w, h)
         }
    }
 
-function browseCustomer() {
+function browseCustomer() 
+{
     var uri = "<?php echo $strPath; ?>/Dialog/DialogCustomer";
     PopupCenter(uri,"Browse Customer.",800,600);
-    /*var options = "dialogWidth=800px; dialogHeight=600px";
-    var w = window.showModalDialog(uri, null, options);
-
-    if (w != null) {
-      $("input[id=Shiping_customer]").val(w.Shiping_customer);
-    }*/
+  
   }
 
 function computePrice(i) 
@@ -132,13 +128,10 @@ function computeTotal()
         var uri = "<?php echo $strPath; ?>/Dialog/DialogSearchShiping";
         PopupCenter(uri,"Browse Shiping.",750,400);
 
-        /*var options = "dialogWidth=750px; dialogHeight=400px";
-        var w = window.showModalDialog(uri, null, options);*/
    }
 
   function modifyShiping(id)
   {
-
         var uri = "<?php echo $strPath; ?>/Shiping/Ship/"+id;
         window.location=uri;
   }
