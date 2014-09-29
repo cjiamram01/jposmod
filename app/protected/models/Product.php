@@ -59,6 +59,13 @@ class Product extends CActiveRecord {
               product_price_send, 
               product_price_per_pack, 
               product_quantity_of_pack,
+              product_weight,
+              product_cost,
+              product_level,
+              product_dimension,
+              group_1,
+              group_2,
+              group_3,
               product_name', 'safe'
         )
     );

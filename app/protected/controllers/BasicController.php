@@ -19,6 +19,98 @@ class BasicController extends Controller {
     ));
   }
 
+  public function actionAdjustItem()
+  {
+     $Dimension=Dimension::model()->findAll();
+     $this->render('//Basic/Adjustitem', array('Dimension'=>$Dimension));
+  }
+
+  public function actionJsonLevel()
+  {
+        $crt0=new CDbCriteria();
+        $crt0->select="id,group_code,DESCRIPTION";
+        $crt0->condition="LEVEL=0";
+        $Ms0=Itemgroup::model()->findAll($crt0);
+
+        $data=array();
+        foreach($Ms0 as $m0)
+        {
+              
+              $crt1=new CDbCriteria();
+              $crt1->select="id,group_code,DESCRIPTION";
+              $crt1->condition="LEVEL=1 AND parent_code=:parent_code";
+              $crt1->params=array(':parent_code'=>$m0->group_code);
+              $Ms1=Itemgroup::model()->findAll($crt1);
+              if(count($Ms1)>0)
+              {
+                  $data1=array();
+                  foreach($Ms1 as $m1)
+                  {
+                    $crt2=new CDbCriteria();
+                    $crt2->select="id,group_code,DESCRIPTION";
+                    $crt2->condition="LEVEL=2 AND parent_code=:parent_code";
+                    $crt2->params=array(':parent_code'=>$m1->group_code);
+                    $Ms2=Itemgroup::model()->findAll($crt2);
+
+                    if(count($Ms2)>0)
+                    {
+                       $data2=array();
+                       foreach($Ms2 as $m2)
+                       {
+                          
+                              $crt3=new CDbCriteria();
+                              $crt3->select="id,group_code,DESCRIPTION";
+                              $crt3->condition="LEVEL=3 AND parent_code=:parent_code";
+                              $crt3->params=array(':parent_code'=>$m2->group_code);
+                              $Ms3=Itemgroup::model()->findAll($crt3);
+
+                              if(count($Ms3)>0)
+                              {
+                                $data3=array();
+                                foreach($Ms3 as $m3)
+                                {
+                                     $crt4=new CDbCriteria();
+                                     $crt4->select="id,group_code,DESCRIPTION";
+                                     $crt4->condition="LEVEL=4 AND parent_code=:parent_code";
+                                     $crt4->params=array(':parent_code'=>$m3->group_code);
+                                     $Ms4=Itemgroup::model()->findAll($crt4);
+
+                                     if(count($Ms4)>0)
+                                     {
+                                        $data4=array();
+                                        foreach($Ms4 as $m4)
+                                        {
+                                            $data4[]=array('group_code'=>$m4->group_code,'description'=>$m4->DESCRIPTION);
+                                        }
+                                        $data3[]=array('group_code'=>$m3->group_code,'description'=>$m3->DESCRIPTION,'Sub_Group3'=>$data4);
+
+                                     }
+                                     else
+                                     $data3[]=array('group_code'=>$m3->group_code,'description'=>$m3->DESCRIPTION);
+
+                                }
+                                $data2[]=array('group_code'=>$m2->group_code,'description'=>$m2->DESCRIPTION,'Sub_Group2'=>$data3);
+
+                              }
+                              else   
+                              {$data2[]=array('group_code'=>$m2->group_code,'description'=>$m2->DESCRIPTION);}
+                       } 
+                       $data1[]=array('group_code'=>$m1->group_code,'description'=>$m1->DESCRIPTION,'Sub_Group1'=>$data2);
+                    }
+                    else
+                    {$data1[]=array('group_code'=>$m1->group_code,'description'=>$m1->DESCRIPTION);}
+                  }
+                  $data[]=array('group_code'=>$m0->group_code,'description'=>$m0->DESCRIPTION,'Main_Group'=>$data1);
+              }
+              else 
+              {$data[]=array('group_code'=>$m0->group_code,'description'=>$m0->DESCRIPTION);}
+        }
+
+        $this->layout='empty';
+        return $data;
+        //echo json_encode($data);
+  } 
+
   public function actionWriteJsonLevel()
   {
      $strJson="{\n";
@@ -26,19 +118,20 @@ class BasicController extends Controller {
 
         $crt0=new CDbCriteria();
         $crt0->select="id,group_code,DESCRIPTION";
-        $crt0->condition="LEVEL=0";
+        $crt0->condition="LEVEL=0 AND group_code='A02' ";
         $Ms0=Itemgroup::model()->findAll($crt0);
         //***********Start Parent Heirachy************* 
         $i0=0;
+        echo count($Ms0)." Rows";
         if(count($Ms0)>0)
         {
           foreach($Ms0 as $m0)
           {
               $i0++;
-            //********************Query level 1**************
+            //********************Query level 0**************
               $crt1=new CDbCriteria();
               $crt1->select="id,group_code,DESCRIPTION";
-              $crt1->condition="LEVEL=1 AND group_code=:parent_code";
+              $crt1->condition="LEVEL=1 AND parent_code=:parent_code";
               $crt1->params=array(':parent_code'=>$m0->group_code);
               $Ms1=Itemgroup::model()->findAll($crt1);
               if(count($Ms1)>0)
@@ -53,7 +146,7 @@ class BasicController extends Controller {
                     /*******Query Level 2************/
                       $crt2=new CDbCriteria();
                       $crt2->select="id,group_code,DESCRIPTION";
-                      $crt2->condition="LEVEL=2 AND group_code=:parent_code";
+                      $crt2->condition="LEVEL=2 AND parent_code=:parent_code";
                       $crt2->params=array(':parent_code'=>$m1->group_code);
                       $Ms2=Itemgroup::model()->findAll($crt2);
                     /*******************************/
@@ -66,7 +159,7 @@ class BasicController extends Controller {
                                /*******Query Level 2************/
                                 $crt3=new CDbCriteria();
                                 $crt3->select="id,group_code,DESCRIPTION";
-                                $crt3->condition="LEVEL=3 AND group_code=:parent_code";
+                                $crt3->condition="LEVEL=3 AND parent_code=:parent_code";
                                 $crt3->params=array(':parent_code'=>$m2->group_code);
                                 $Ms3=Itemgroup::model()->findAll($crt2);
                               /*******************************/
@@ -113,91 +206,13 @@ class BasicController extends Controller {
      $strJson.="}";
 
 
-    $fp = fopen('ItemGroup7.json', 'w');
+    $fp = fopen('HEIRACHY.json', 'w');
     fwrite($fp, $strJson);
 
     fclose($fp);
   }
 
-  public function actionWriteJsonItemGroup()
-  {
-    $strJson="{\n";
-    $strJson.=" \"root\": [\n";
-    $crt1=new CDbCriteria();
-    $crt1->select="id,group_code,DESCRIPTION";
-    $crt1->condition="LEVEL=0";
-    $Ms1=Itemgroup::model()->findAll($crt1);
-    //***********Start Parent Heirachy************* 
-    $i1=0;
-    foreach($Ms1 as $m1)
-    {
-      $i1++;
-      $strJson.="\t\t{\n";
-      $strDesc=str_replace('"', '', $m1->DESCRIPTION);
-      $strJson.= "\t\t\t\"ชื่อกลุ่มที่ 0 :\"".$strDesc."\"";
-
-      //***********Start first child*******
-      $crt2=new CDbCriteria();
-      $crt2->select="id,group_code,DESCRIPTION";
-      $crt2->condition="LEVEL=1 AND parent_code=:parent_code";
-      $crt2->params=array(':parent_code'=>$m1->group_code);
-      $Ms2=Itemgroup::model()->findAll($crt2);
-      if(count($Ms2)>0)
-      {
-        $strJson.=",\n";
-        $strJson.="\t\t\t\t\"ลำดับที่ 1\": [\n";
-        $i2=0;
-        foreach($Ms2 as $m2)
-        {
-          $i2++;
-          $strJson.="\t\t\t\t\t{\n";
-          $strDesc=str_replace('"', '', $m2->DESCRIPTION);
-          $strJson.= "\t\t\t\t\t\t\"".$strDesc."\"";
-          
-          //****************Start second child******
-            $crt3=new CDbCriteria();
-            $crt3->select="id,group_code,DESCRIPTION";
-            $crt3->condition="LEVEL=2 AND parent_code=:parent_code";
-            $crt3->params=array(':parent_code'=>$m2->group_code);
-            $Ms3=Itemgroup::model()->findAll($crt3);
-            if(count($Ms3)>0)
-            { 
-              $strJson.=",\n";
-              $i3=0;
-              $strJson.="\t\t\t\t\t\t\t: [\n";
-              foreach($Ms3 as $m3)
-              {
-                $i3++;
-                $strJson.="\t\t\t\t\t\t\t\t{\n";
-                $strDesc=str_replace('"', '', $m3->DESCRIPTION);
-                $strJson.= "\t\t\t\t\t\t\t\t\t\"".$strDesc."\"\n";
-                $strJson.=$i3<count($Ms3)?"\t\t\t\t\t\t\t\t},\n":"\t\t\t\t\t\t\t\t}\n";
-              }
-              $strJson.="\t\t\t\t\t\t\t]\n";
-            }
-
-          //****************************************
-          $strJson.=$i2<count($Ms2)?"\t\t\t\t\t},\n":"\t\t\t\t\t}\n";
-
-        }
-        $strJson.="\t\t\t\t]\n";
-      }
-
-      //***********************************
-      
-      $strJson.=$i1<count($Ms1)?"\t\t},\n":"\t\t}\n";
-    }
-    //***********End Parent Heirachy*************
-
-    $strJson.="\t]\n";  
-    $strJson.="}\n";
-
-    $fp = fopen('ItemGroup4.json', 'w');
-    fwrite($fp, $strJson);
-
-    fclose($fp);
-
-  }
+  
 
   
 
@@ -384,6 +399,8 @@ class BasicController extends Controller {
       $size = count($arrayBillSaleDetail);
 
       // ADD bill_sale_detail ITEMS
+        
+
       $productCode = $_POST['product_code'];
       $code = "";
       $price = 0;

@@ -12533,3 +12533,1233 @@ Stack trace:
 REQUEST_URI=/jpos/app/Config/index.php?r=Ajax/GetGroupProductInfo&group_product_code=1001&_=1410336269168
 HTTP_REFERER=http://localhost/jpos/app/Config/ProductForm
 ---
+2014/09/18 18:37:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "TreeView.xml".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('TreeView.xml')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/TreeView.xml
+---
+2014/09/19 05:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ten-levels.json".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('ten-levels.json')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/ten-levels.json
+HTTP_REFERER=http://localhost/jpos/app/Testtree.php
+---
+2014/09/19 10:09:48 [error] [exception.CException] exception 'CException' with message 'Property "Itemgroup.description" is not defined.' in C:\xampp\htdocs\jpos\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\db\ar\CActiveRecord.php(145): CComponent->__get('description')
+#1 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(31): CActiveRecord->__get('description')
+#2 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('TreeView')
+#7 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/TreeView')
+#8 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/jpos/app/basic/TreeView
+---
+2014/09/19 10:11:10 [error] [php] include(basic.php): failed to open stream: No such file or directory (C:\xampp\htdocs\jpos\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#5 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(33): BasicController->render()
+#6 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#9 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#11 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (8)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (33)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/19 10:16:05 [error] [php] include(basic.php): failed to open stream: No such file or directory (C:\xampp\htdocs\jpos\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(10): spl_autoload_call()
+#1 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#5 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(33): BasicController->render()
+#6 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#9 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#11 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (10)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (33)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/19 10:18:58 [error] [php] Undefined variable: category (C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(33): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (9)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (25)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (33)
+2014/09/19 10:20:33 [error] [php] Undefined variable: category (C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(33): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (19)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (35)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (33)
+2014/09/19 10:22:24 [error] [php] Undefined variable: category (C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(33): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (19)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (35)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (33)
+2014/09/19 10:32:15 [error] [php] Undefined variable: arrayCategories (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:25)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (25)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/19 10:32:47 [error] [php] Undefined variable: arrayCategories (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:25)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (25)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/19 10:34:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/19 10:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/19 10:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/19 11:30:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/19 11:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/19 17:33:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/19 17:34:25 [error] [php] Missing argument 1 for createTreeMenu(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php on line 37 and defined (C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(39): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (9)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (37)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (39)
+2014/09/19 17:35:12 [error] [exception.CException] exception 'CException' with message 'BasicController and its behaviors do not have a method or closure named "createTreeMenu".' in C:\xampp\htdocs\jpos\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(37): CComponent->__call('createTreeMenu', Array)
+#1 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(37): BasicController->createTreeMenu()
+#2 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(782): CController->renderPartial('//basic/TreeVie...', Array, true)
+#6 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(39): CController->render('//basic/TreeVie...', Array)
+#7 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('TreeView')
+#12 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/TreeView')
+#13 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/jpos/app/basic/TreeView
+---
+2014/09/19 17:37:14 [error] [php] Missing argument 1 for BasicController::createTreeMenu(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php on line 18 and defined (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (36)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (18)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+2014/09/19 17:38:05 [error] [php] Missing argument 1 for BasicController::createTreeMenu(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php on line 18 and defined (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (36)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (18)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+2014/09/19 17:39:32 [error] [php] include(basic.php): failed to open stream: No such file or directory (C:\xampp\htdocs\jpos\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(18): spl_autoload_call()
+#1 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#5 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#6 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#9 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#11 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (18)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/19 17:40:34 [error] [php] Missing argument 1 for createTreeMenu(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php on line 37 and defined (C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (9)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (37)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+2014/09/19 17:41:14 [error] [php] Missing argument 1 for BasicController::createTreeMenu(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php on line 37 and defined (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (36)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (37)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+2014/09/19 17:41:56 [error] [exception.CException] exception 'CException' with message 'BasicController and its behaviors do not have a method or closure named "createTreeMenu".' in C:\xampp\htdocs\jpos\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(37): CComponent->__call('createTreeMenu', Array)
+#1 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(37): BasicController->createTreeMenu()
+#2 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(782): CController->renderPartial('//basic/TreeVie...', Array, true)
+#6 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): CController->render('//basic/TreeVie...', Array)
+#7 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('TreeView')
+#12 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/TreeView')
+#13 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/jpos/app/basic/TreeView
+---
+2014/09/19 17:42:35 [error] [php] Missing argument 1 for createTreeMenu(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php on line 37 and defined (C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (9)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (37)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+2014/09/19 17:47:06 [error] [php] include(basic.php): failed to open stream: No such file or directory (C:\xampp\htdocs\jpos\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(18): spl_autoload_call()
+#1 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#5 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#6 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#9 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#11 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (18)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/19 17:47:38 [error] [php] Missing argument 1 for BasicController::createTreeMenu(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php on line 18 and defined (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:35)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (35)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (18)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+2014/09/19 18:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "treeview".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('treeview')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('treeview')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('dialog/treeview')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/dialog/treeview
+---
+2014/09/19 18:33:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "TreeView.json".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('TreeView.json')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('TreeView.json')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('dialog/TreeView...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/dialog/TreeView.json
+HTTP_REFERER=http://localhost/jpos/app/dialog/DialogTreeView
+---
+2014/09/19 18:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/19 19:02:30 [error] [php] Undefined variable: categories (C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php:6)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#2 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#3 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#7 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (6)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (32)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/20 03:10:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:16:53 [error] [php] Undefined variable: array (C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php:102)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#4 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#5 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (102)
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (95)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (7)
+2014/09/20 03:17:57 [error] [php] Undefined variable: array (C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php:102)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#4 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#5 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (102)
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (95)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (7)
+2014/09/20 03:18:45 [error] [php] Undefined index: childGroup (C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#4 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): BasicController->render()
+#5 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/TreeView
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (108)
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (95)
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php (7)
+2014/09/20 03:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:24:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('folder-horizont...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('folder-horizont...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/folder-ho...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('folder-horizont...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('folder-horizont...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/folder-ho...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:31:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('folder-horizont...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('folder-horizont...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/folder-ho...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:39:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "document.png".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('document.png')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('document.png')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/document....')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/document.png
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:39:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('folder-horizont...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('folder-horizont...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/folder-ho...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:44:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "document.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('document.png')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/document.png
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:44:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('folder-horizont...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:48:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:49:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/basic/TreeView
+---
+2014/09/20 03:50:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/document.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/document.pn...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/document.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 03:50:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/folder-hori...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 03:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/toggle-small-expand.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/toggle-smal...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/toggle-small-expand.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 03:58:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/toggle-small.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/toggle-smal...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/toggle-small.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:00:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/toggle-small-expand.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/togg...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/images/toggle-small-expand.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:00:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/fold...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/images/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:00:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/document.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/document.pn...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/document.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:00:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/toggle-small.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/togg...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/images/toggle-small.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:01:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/fold...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/images/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/toggle-small-expand.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/togg...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/images/toggle-small-expand.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/document.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/document.pn...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/document.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/document.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/document.pn...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/document.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/folder-horizontal.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/fold...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/images/folder-horizontal.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/toggle-small-expand.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/togg...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/images/toggle-small-expand.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:01:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/toggle-small.png".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/togg...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/images/toggle-small.png
+HTTP_REFERER=http://localhost/jpos/app/css/_styles.css
+---
+2014/09/20 04:17:20 [error] [exception.CException] exception 'CException' with message 'Property "Itemgroup.parent_id" is not defined.' in C:\xampp\htdocs\jpos\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\db\ar\CActiveRecord.php(145): CComponent->__get('parent_id')
+#1 C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php(13): CActiveRecord->__get('parent_id')
+#2 C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php(65): TreeMenu->getCategoriesData()
+#3 C:\xampp\htdocs\jpos\app\protected\views\Basic\TreeView.php(9): TreeMenu->generateTree()
+#4 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(782): CController->renderPartial('//basic/TreeVie...', Array, true)
+#8 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(32): CController->render('//basic/TreeVie...', Array)
+#9 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionTreeView()
+#10 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('TreeView')
+#14 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic/TreeView')
+#15 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#17 {main}
+REQUEST_URI=/jpos/app/basic/TreeView
+---
+2014/09/23 07:06:08 [error] [exception.CException] exception 'CException' with message 'PartialController and its behaviors do not have a method or closure named "createTreeMenu".' in C:\xampp\htdocs\jpos\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php(34): CComponent->__call('createTreeMenu', Array)
+#1 C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php(34): PartialController->createTreeMenu(Array, 0)
+#2 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(782): CController->renderPartial('//Partial/TreeV...', Array, true)
+#6 C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php(13): CController->render('//Partial/TreeV...', Array)
+#7 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): PartialController->actionGenerateTreeview()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GenerateTreevie...')
+#12 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partial/Generat...')
+#13 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview
+---
+2014/09/23 07:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "partail/TreeView".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('partail/TreeVie...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/partail/TreeView
+---
+2014/09/23 07:12:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Partail/TreeView".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partail/TreeVie...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/Partail/TreeView
+---
+2014/09/23 07:12:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Partail/GenerateTreeview".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partail/Generat...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/Partail/GenerateTreeview
+---
+2014/09/23 07:14:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/Partial/GenerateTreeview
+---
+2014/09/23 07:15:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/Partial/GenerateTreeview
+---
+2014/09/23 07:15:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/_style.css".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('css/_style.css')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/css/_style.css
+HTTP_REFERER=http://localhost/jpos/app/Partial/GenerateTreeview
+---
+2014/09/23 07:32:23 [error] [php] Missing argument 1 for TreeMenu::getTreeData(), called in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php on line 12 and defined (C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php:6)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(286): PartialController->runAction()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(265): PartialController->runActionWithFilters()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): PartialController->run()
+#4 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (6)
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (12)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 08:50:45 [error] [php] Undefined variable: level (C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(286): PartialController->runAction()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(265): PartialController->runActionWithFilters()
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): PartialController->run()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (12)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 08:51:43 [error] [php] Undefined variable: level (C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(286): PartialController->runAction()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(265): PartialController->runActionWithFilters()
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): PartialController->run()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (12)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 08:55:20 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): PartialController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): PartialController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): PartialController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php(14): PartialController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): PartialController->actionGenerateTreeview()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): PartialController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): PartialController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): PartialController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview
+in C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php (30)
+in C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php (39)
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (14)
+2014/09/23 08:57:22 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): PartialController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): PartialController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): PartialController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php(14): PartialController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): PartialController->actionGenerateTreeview()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): PartialController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): PartialController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): PartialController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview
+in C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php (30)
+in C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php (39)
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (14)
+2014/09/23 08:59:26 [error] [php] Illegal string offset 'description' (C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): PartialController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): PartialController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): PartialController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php(14): PartialController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): PartialController->actionGenerateTreeview()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): PartialController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): PartialController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): PartialController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview
+in C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php (30)
+in C:\xampp\htdocs\jpos\app\protected\views\Partial\TreeView.php (39)
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (14)
+2014/09/23 09:24:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'parent_code='A01'' at line 1. The SQL statement executed was: SELECT DISTINCT group_code,DESCRIPTION FROM `tbl_itemgroup` `t` WHERE LEVEL=0 parent_code=:dimCode.
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (12)
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (15)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 09:24:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'parent_code='A01'' at line 1. The SQL statement executed was: SELECT DISTINCT group_code,DESCRIPTION FROM `tbl_itemgroup` `t` WHERE LEVEL=0 parent_code=:dimCode' in C:\xampp\htdocs\jpos\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\jpos\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\jpos\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php(12): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php(15): TreeMenu->getTreeData('A01')
+#5 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): PartialController->actionGenerateTreeview()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GenerateTreevie...')
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partial/Generat...')
+#11 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview?dimCode=A01
+---
+2014/09/23 09:26:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group_code LIKE 'A01%'' at line 1. The SQL statement executed was: SELECT DISTINCT group_code,DESCRIPTION FROM `tbl_itemgroup` `t` WHERE LEVEL=0 group_code LIKE :dimCode.
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (12)
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (15)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 09:26:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group_code LIKE 'A01%'' at line 1. The SQL statement executed was: SELECT DISTINCT group_code,DESCRIPTION FROM `tbl_itemgroup` `t` WHERE LEVEL=0 group_code LIKE :dimCode' in C:\xampp\htdocs\jpos\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\jpos\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\jpos\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php(12): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php(15): TreeMenu->getTreeData('A01')
+#5 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): PartialController->actionGenerateTreeview()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('GenerateTreevie...')
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partial/Generat...')
+#11 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview?dimCode=A01
+---
+2014/09/23 10:36:43 [error] [php] Undefined variable: model (C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#2 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(24): BasicController->render()
+#3 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionAdjustItem()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#7 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Basic/Adjustitem
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php (22)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (24)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 11:57:47 [error] [php] Undefined variable: clients (C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php:32)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#2 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(25): BasicController->render()
+#3 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionAdjustItem()
+#4 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#7 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Basic/Adjustitem
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php (32)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (25)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 14:46:30 [error] [php] Missing argument 3 for CHtml::dropDownList(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php on line 33 and defined (C:\xampp\htdocs\jpos\framework\web\helpers\CHtml.php:915)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(25): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionAdjustItem()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Basic/Adjustitem
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php (33)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (25)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 14:47:41 [error] [php] Missing argument 3 for CHtml::dropDownList(), called in C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php on line 33 and defined (C:\xampp\htdocs\jpos\framework\web\helpers\CHtml.php:915)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#3 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(25): BasicController->render()
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionAdjustItem()
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Basic/Adjustitem
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php (33)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (25)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 14:52:58 [error] [php] Object of class Dimension could not be converted to string (C:\xampp\htdocs\jpos\framework\web\helpers\CHtml.php:2343)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\jpos\framework\web\CBaseController.php(95): BasicController->renderInternal()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(869): BasicController->renderFile()
+#3 C:\xampp\htdocs\jpos\framework\web\CController.php(782): BasicController->renderPartial()
+#4 C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php(25): BasicController->render()
+#5 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(49): BasicController->actionAdjustItem()
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#8 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#10 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Basic/Adjustitem
+in C:\xampp\htdocs\jpos\app\protected\views\Basic\AdjustItem.php (34)
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (25)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 15:17:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "TreeGroup.php".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('TreeGroup.php')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/TreeGroup.php
+---
+2014/09/23 16:39:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic
+---
+2014/09/23 16:40:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic/
+---
+2014/09/23 16:40:29 [error] [php] Undefined index: product_code (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:402)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/sale
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (402)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 16:40:42 [error] [php] Undefined index: product_code (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:402)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/sale
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (402)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 16:41:43 [error] [php] Undefined index: product_code (C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php:402)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(286): BasicController->runAction()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(265): BasicController->runActionWithFilters()
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): BasicController->run()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/basic/sale
+in C:\xampp\htdocs\jpos\app\protected\controllers\BasicController.php (402)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/23 16:45:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('basic')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/basic
+---
+2014/09/23 16:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/site/login
+---
+2014/09/23 16:46:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Adjustitem".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Adjustitem')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/Adjustitem
+---
+2014/09/23 18:14:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Partail/GenerateTreeview".' in C:\xampp\htdocs\jpos\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partail/Generat...')
+#1 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/jpos/app/Partail/GenerateTreeview
+---
+2014/09/26 14:54:06 [error] [php] Undefined variable: m0 (C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php:91)
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\jpos\framework\web\CController.php(286): PartialController->runAction()
+#2 C:\xampp\htdocs\jpos\framework\web\CController.php(265): PartialController->runActionWithFilters()
+#3 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): PartialController->run()
+#4 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\jpos\app\index.php(16): CWebApplication->run()
+REQUEST_URI=/jpos/app/Partial/GenerateTreeview?dimCode=A02
+in C:\xampp\htdocs\jpos\app\protected\components\TreeMenu.php (91)
+in C:\xampp\htdocs\jpos\app\protected\controllers\PartialController.php (15)
+in C:\xampp\htdocs\jpos\app\index.php (16)
+2014/09/29 07:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ProductList&groupLevel=1&groupCode=''".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('ProductList&gro...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('ProductList&gro...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partial/Product...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Partial/ProductList&groupLevel=1&groupCode=''
+---
+2014/09/29 07:53:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ProductList&groupLevel=1&groupCode=".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('ProductList&gro...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('ProductList&gro...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partial/Product...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Partial/ProductList&groupLevel=1&groupCode=
+---
+2014/09/29 07:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ProductList&groupLevel=1&groupCode=1".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('ProductList&gro...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('ProductList&gro...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partial/Product...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Partial/ProductList&groupLevel=1&groupCode=1
+---
+2014/09/29 07:55:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ProductList&groupLevel=1&groupCode=".' in C:\xampp\htdocs\jpos\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\web\CController.php(270): CController->missingAction('ProductList&gro...')
+#1 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('ProductList&gro...')
+#2 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('Partial/Product...')
+#3 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/jpos/app/Partial/ProductList&groupLevel=1&groupCode=
+---

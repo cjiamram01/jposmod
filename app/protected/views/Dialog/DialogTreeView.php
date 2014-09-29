@@ -1,10 +1,12 @@
- 
+ <?php
+  $strPath= Yii::app()->baseUrl;
+ ?>
  <script type="text/javascript">
   $(function()
     {
     //Initialise JQUERY4U JSON Tree Viewer
       JSONTREEVIEWER.init();
-      JSONTREEVIEWER.processJSONTree('ItemGroup7.json');
+      JSONTREEVIEWER.processJSONTree('<?php echo $strPath; ?>/TreeView.json');
     }
   );
   </script>

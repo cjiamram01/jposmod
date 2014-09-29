@@ -15,8 +15,10 @@
     echo CHtml::cssFile($strPath.'/css/bootstrap.css');
     echo CHtml::cssFile($strPath.'/css/bootstrap-theme.css');
     
+    
+ 
     if(Yii::app()->controller->action->id!="ChooseItem")
-        echo CHtml::cssFile($strPath.'/css/ui-lightness/jquery-ui-1.10.3.custom.css');
+    {echo CHtml::cssFile($strPath.'/css/ui-lightness/jquery-ui-1.10.3.custom.css');}
     else
     {
         echo CHtml::cssFile($strPath.'/css/ui-lightness/jquery-ui-1.10.3.custom.css');
@@ -25,18 +27,17 @@
     }
     
 
-    //echo CHtml::cssFile($strPath.'/css/jquery.treeview.css');
-
+   
     if(Yii::app()->controller->action->id!="ChooseItem")
     {
       Yii::app()->clientScript->registerScriptFile($strPath.'/js/jquery-2.0.3.js');
       Yii::app()->clientScript->registerScriptFile($strPath.'/js/jquery-ui-1.10.3.custom.js');
-      Yii::app()->clientScript->registerScriptFile($strPath.'/js/jquery.treeview.js');
       Yii::app()->clientScript->registerScriptFile($strPath.'/js/jQueryRotateCompressed.2.1.js');
-      //Yii::app()->clientScript->registerScriptFile($strPath.'/js/jquery.jsontreeviewer.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/bootstrap.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/numeral/numeral.js');
+
     }
     else
-
     {
       Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/plusone.js');
       Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/jquery-1.7.1.min.js');
@@ -47,11 +48,13 @@
       Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/shCore.js');
       Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/shBrushPhp.js');
       Yii::app()->clientScript->registerScriptFile($strPath.'/JQueryUI/shBrushXml.js');
+
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/bootstrap.js');
+      Yii::app()->clientScript->registerScriptFile($strPath.'/js/numeral/numeral.js');
+
     }
 
 
-    Yii::app()->clientScript->registerScriptFile($strPath.'/js/bootstrap.js');
-    Yii::app()->clientScript->registerScriptFile($strPath.'/js/numeral/numeral.js');
   
     ?>
 

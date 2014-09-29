@@ -1,8 +1,9 @@
 <?php
 
 class AjaxController extends Controller {
-
+ 
   
+
   public function actionGenerateBarCode() 
   {
     $barcode= Yii::app()->request->getParam('barcode');
