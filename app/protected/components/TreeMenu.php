@@ -36,25 +36,25 @@ class TreeMenu
                       $data3=array();
                       foreach($Ms3 as $m3)
                       {
-                            $crt4=new CDbCriteria();
-                            $crt4->distinct=true;
-                            $crt4->select="group_code,DESCRIPTION";
-                            $crt4->condition="LEVEL=4 AND parent_code=:parent_code";
-                            $crt4->params=array(':parent_code'=>$m3->group_code);
-                            $Ms4=Itemgroup::model()->findAll($crt3);
-                            if(count($Ms4)>0)
-                            {
-                                $data4=array();
-                                foreach($Ms4 as $m4)
-                                {
-                                  $data4[]=array('group_code'=>$m4->group_code,'description'=>$m4->DESCRIPTION,'level'=>4);
-                                }
-                                $data3[]=array('group_code'=>$m3->group_code,'description'=>$m3->DESCRIPTION,'dataGroup'=>$data4,'level'=>3);
-                            }
-                            else
-                            {
+                            //$crt4=new CDbCriteria();
+                            //$crt4->distinct=true;
+                            //$crt4->select="group_code,DESCRIPTION";
+                            //$crt4->condition="LEVEL=4 AND parent_code=:parent_code";
+                            //$crt4->params=array(':parent_code'=>$m3->group_code);
+                            //$Ms4=Itemgroup::model()->findAll($crt3);
+                            //if(count($Ms4)>0)
+                            //{
+                             //   $data4=array();
+                             //   foreach($Ms4 as $m4)
+                             //   {
+                             //     $data4[]=array('group_code'=>$m4->group_code,'description'=>$m4->DESCRIPTION,'level'=>4);
+                             //   }
+                             //   $data3[]=array('group_code'=>$m3->group_code,'description'=>$m3->DESCRIPTION,'dataGroup'=>$data4,'level'=>3);
+                            //}
+                            //else
+                            //{
                               $data3[]=array('group_code'=>$m3->group_code,'description'=>$m3->DESCRIPTION,'level'=>3);
-                            }
+                            //}
                       }
                       $data2[]=array('group_code'=>$m2->group_code,'description'=>$m2->DESCRIPTION,'dataGroup'=>$data3,'level'=>2);
 
