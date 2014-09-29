@@ -67,7 +67,7 @@ function stateTreeChange()
 
 
 </script>
-<div class="col-sm-3">
+<div class="col-sm-4">
 <div class="panel panel-primary" style="margin: 10px">
  
   <div class="panel-heading">ระบบการปรับปรุงวัสดุ</div>
@@ -111,8 +111,8 @@ function stateTreeChange()
 </div>
 
 </div>
- <div class="col-sm-9">
-      <div class="col-sm-12" id="divList">
-      </div>
+ <div class="col-sm-8 ">
+    <div class="panel panel-primary" id="divList"  style="margin: 10px">
+    </div>
 </div>
 

@@ -13763,3 +13763,21 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/jpos/app/Partial/ProductList&groupLevel=1&groupCode=
 ---
+2014/09/29 17:31:48 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\xampp\htdocs\jpos\framework\YiiBase.php:193
+Stack trace:
+#0 C:\xampp\htdocs\jpos\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#1 C:\xampp\htdocs\jpos\framework\gii\generators\model\ModelGenerator.php(17): CModule->getComponent('dbMsSql')
+#2 [internal function]: ModelGenerator->actionGetTableNames('dbMsSql')
+#3 C:\xampp\htdocs\jpos\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ModelGenerator), Array)
+#4 C:\xampp\htdocs\jpos\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ModelGenerator), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\jpos\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\jpos\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\jpos\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(282): CController->run('getTableNames')
+#9 C:\xampp\htdocs\jpos\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/getTa...')
+#10 C:\xampp\htdocs\jpos\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\jpos\app\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/jpos/app/index.php/gii/model/getTableNames?db=dbMsSql
+HTTP_REFERER=http://localhost/jpos/app/index.php/gii/model/index
+---

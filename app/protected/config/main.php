@@ -72,6 +72,13 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+
+
+		  'dbMsSql' => array(
+                   'connectionString' => 'sqlsrv:Server=tcp:127.0.0.1;Database=DBStore',
+                   'username' => 'sa',
+                   'password' => 'bangy123',
+               ),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
