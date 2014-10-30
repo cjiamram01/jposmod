@@ -10,6 +10,13 @@
  * @property string $create_date
  * @property string $quantity
  * @property string $barcode
+ * @property string $docno
+ * @property string $amount
+ * @property string $unitcode
+ * @property string $supplier
+ * @property string $productcode
+ * @property string $cost
+ * @property string $DOCDATE
  */
 class Lottransaction extends CActiveRecord
 {
@@ -30,13 +37,16 @@ class Lottransaction extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('lot_no', 'numerical', 'integerOnly'=>true),
-			array('item_id', 'length', 'max'=>20),
-			array('quantity', 'length', 'max'=>18),
+			array('item_id, docno', 'length', 'max'=>20),
+			array('quantity, amount, cost', 'length', 'max'=>18),
 			array('barcode', 'length', 'max'=>500),
-			array('create_date', 'safe'),
+			array('unitcode', 'length', 'max'=>100),
+			array('supplier', 'length', 'max'=>200),
+			array('productcode', 'length', 'max'=>30),
+			array('create_date, DOCDATE', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, item_id, lot_no, create_date, quantity, barcode', 'safe', 'on'=>'search'),
+			array('id, item_id, lot_no, create_date, quantity, barcode, docno, amount, unitcode, supplier, productcode, cost, DOCDATE', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +73,13 @@ class Lottransaction extends CActiveRecord
 			'create_date' => 'Create Date',
 			'quantity' => 'Quantity',
 			'barcode' => 'Barcode',
+			'docno' => 'Docno',
+			'amount' => 'Amount',
+			'unitcode' => 'Unitcode',
+			'supplier' => 'Supplier',
+			'productcode' => 'Productcode',
+			'cost' => 'Cost',
+			'DOCDATE' => 'Docdate',
 		);
 	}
 
@@ -90,6 +107,13 @@ class Lottransaction extends CActiveRecord
 		$criteria->compare('create_date',$this->create_date,true);
 		$criteria->compare('quantity',$this->quantity,true);
 		$criteria->compare('barcode',$this->barcode,true);
+		$criteria->compare('docno',$this->docno,true);
+		$criteria->compare('amount',$this->amount,true);
+		$criteria->compare('unitcode',$this->unitcode,true);
+		$criteria->compare('supplier',$this->supplier,true);
+		$criteria->compare('productcode',$this->productcode,true);
+		$criteria->compare('cost',$this->cost,true);
+		$criteria->compare('DOCDATE',$this->DOCDATE,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

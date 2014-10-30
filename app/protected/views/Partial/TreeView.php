@@ -23,7 +23,7 @@ function stateTreeChange()
   }
   else
   {
-    document.getElementById('divList').innerHTML = "<img src='<?php echo $strPath?>/images/loading.gif'>";
+    document.getElementById('divList').innerHTML = "Loading...";
     //"Loading...";
   }
 } 

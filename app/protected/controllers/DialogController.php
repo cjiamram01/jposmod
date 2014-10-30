@@ -17,17 +17,9 @@ class DialogController extends CController {
 
  function actionDialogReprintBillVatPDF() {
     
-    //$str=Yii::app()->urlManager->parseUrl(Yii::app()->request);
-    //echo $str;
-    /*$str =explode("/",$str);
-    
-     if(count($str)>0)
-      $sale_bill_id= $str[count($str)-1];
-    else
-      $sale_bill_id=0;*/
+
     $sale_bill_id = Yii::app()->request->getParam('bill_id');
-    //echo  $sale_bill_id;
-    /*echo  $sale_bill_id;*/
+
     if(isset($sale_bill_id))
     {
 
@@ -337,6 +329,37 @@ class DialogController extends CController {
         'model' => $model
     ));
   }
+
+  public function actionDialogGR() 
+  {
+    $model = new CActiveDataProvider('Lottransaction', array(
+        'pagination' => array(
+            'pageSize' => 20
+        )
+    ));
+
+    $productCode = Yii::app()->request->getParam('productCode');
+    //echo $productCode;
+    if(isset($productCode))
+    //$productCode='';
+    {
+         $criteria = new CDbCriteria();
+         $criteria->select="docno,productcode,quantity,cost,amount,unitcode,supplier,DOCDATE";
+         //$criteria->alias="gr";
+         $criteria->compare('productcode',"P".$productCode);
+         //$criteria->join="JOIN tb_product on";
+         $criteria->limit = 3;
+         $criteria->order = "DOCDATE DESC";
+     
+         $model->setCriteria($criteria);
+    }
+
+
+    $this->render('//Dialog/DialogGR', array(
+        'model' => $model
+    ));
+  }
+
 
   public function actionDialogMember() {
     $model = new CActiveDataProvider('Member', array(

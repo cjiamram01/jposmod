@@ -66,6 +66,7 @@ return array(
 
 		
 		'db'=>array(
+			//'connectionString' => 'mysql:host=192.168.12.44;dbname=db_jpos',
 			'connectionString' => 'mysql:host=localhost;dbname=db_jpos',
 			'emulatePrepare' => true,
 			'username' => 'root',
